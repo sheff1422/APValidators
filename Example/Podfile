@@ -2,11 +2,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'APValidators_Example', :exclusive => true do
-  pod 'APValidators', :path => '../'
+
 end
 
 target 'APValidators_Tests', :exclusive => true do
-  pod 'APValidators', :path => '../'
-
+	pod 'Expecta'
+	pod 'OCMock'
   
 end
