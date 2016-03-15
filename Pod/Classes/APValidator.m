@@ -5,20 +5,14 @@
 
 #import "APValidator.h"
 
-NSString *const APValidatorDidChangeStateNotification = @"APValidatorDidChangeStateNotification";
+NSString *const APValidatorStateChangedNotification = @"APValidatorStateChangedNotification";
 
 
-static inline NSString *APValidatorStateToString(APValidatorState state) {
-    switch (state) {
-        case APValidatorState_Undefined:
-            return @"Undefined";
-        case APValidatorState_NotValid:
-            return @"Not Valid";
-        case APValidatorState_Valid:
-            return @"Valid";
-    }
-    return nil;
-}
+
+@interface APValidator ()
+
+@property(nonatomic, assign, getter=isValid, readwrite) BOOL valid;
+@end
 
 
 
@@ -31,16 +25,16 @@ static inline NSString *APValidatorStateToString(APValidatorState state) {
 {
     self = [super init];
     if (self) {
-        _validationState = APValidatorState_Undefined;
+        self.valid = YES;
     }
     return self;
 }
 
 #pragma mark - Accessors
 
-- (void)setValidationState:(APValidatorState)validationState
+- (void)setValid:(BOOL)valid
 {
-    if (_validationState == validationState) {
+    if (_valid == valid) {
         return;
     }
 
@@ -48,13 +42,13 @@ static inline NSString *APValidatorStateToString(APValidatorState state) {
         [self.delegate validatorWillChangeState:self];
     }
 
-    _validationState = validationState;
+    _valid = valid;
 
     if (self.validatorStateChangedHandler) {
         self.validatorStateChangedHandler(self);
     }
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:APValidatorDidChangeStateNotification
+    [[NSNotificationCenter defaultCenter] postNotificationName:APValidatorStateChangedNotification
                                                         object:self];
 
     if ([self.delegate respondsToSelector:@selector(validatorDidChangeState:)]) {
@@ -62,23 +56,11 @@ static inline NSString *APValidatorStateToString(APValidatorState state) {
     }
 }
 
-- (BOOL)isRequired
-{
-    if (! _required) {
-        _required = NO;
-    }
-    return _required;
-}
-
-
 #pragma mark - Abstract
 
 - (void)validate
 {
-    if (! self.validationObject) {
-        self.validationState = self.required ? APValidatorState_NotValid : APValidatorState_Undefined;
-        return;
-    }
+    // abstract
 }
 
 #pragma mark - Description
@@ -86,9 +68,8 @@ static inline NSString *APValidatorStateToString(APValidatorState state) {
 - (NSString *)description
 {
     NSMutableString *description = [NSMutableString stringWithFormat:@"<%@:  ", NSStringFromClass([self class])];
-    [description appendFormat:@"validationState = %@;  ", APValidatorStateToString(self.validationState)];
-    [description appendFormat:@"validationObject = %@;  ", self.validationObject ? self.validationObject : @"Nil"];
-    [description appendFormat:@"isRequired = %@", self.isRequired ? @"Yes" : @"No"];
+    [description appendFormat:@"State = %@;  ", self.isValid ? @"Valid" : @"Not Valid"];
+    [description appendFormat:@"Object = %@;", self.validationObject ? self.validationObject : @"Nil"];
     [description appendString:@">"];
     return description;
 }

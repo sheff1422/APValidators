@@ -13,7 +13,8 @@
 
 @property(nonatomic, strong) IBOutletCollection(APValidator) NSArray *validators;
 
-@property(nonatomic, strong, readonly) NSArray *failedValidators;
+
+@property(nonatomic, strong, readonly) NSArray *errorMessages;
 
 @end
 

@@ -7,28 +7,10 @@
 
 
 
-@interface APCompoundValidator ()
-
-
-@property(nonatomic, strong, readwrite) NSArray *failedValidators;
-@end
-
-
-
 @implementation APCompoundValidator
 
 
 #pragma mark - Lifecycle
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.failedValidators = @[];
-    }
-    return self;
-}
-
 
 - (void)dealloc
 {
@@ -49,6 +31,22 @@
     [self setupAllValidators];
 }
 
+- (NSArray *)errorMessages
+{
+    NSMutableArray *result = [NSMutableArray array];
+    for (APValidator *validator in self.validators) {
+        if (! validator.isValid && validator.errorMessage) {
+            [result addObject:validator.errorMessage];
+        }
+    }
+    return [result copy];
+}
+
+- (NSString *)errorMessage
+{
+    return [self.errorMessages count] > 0 ? self.errorMessages[0] : nil;
+}
+
 #pragma mark - Overriden
 
 - (void)validate
@@ -58,38 +56,16 @@
 
 - (void)checkAllValidatorsAndUpdateState
 {
-    APValidatorState state = APValidatorState_Undefined;
+    BOOL valid = YES;
 
     for (APValidator *validator in self.validators) {
-        if ((validator.validationState == APValidatorState_NotValid) ||
-                (validator.validationState == APValidatorState_Undefined && validator.isRequired)) {
-            state = APValidatorState_NotValid;
-            [self findAllNotValidValidators];
+        if (! validator.isValid) {
+            valid = NO;
             break;
         }
-
-        if (validator.validationState == APValidatorState_Valid) {
-            state = APValidatorState_Valid;
-        }
     }
 
-    if (state == APValidatorState_Undefined && self.isRequired) {
-        state = APValidatorState_NotValid;
-    }
-
-    self.validationState = state;
-}
-
-- (void)findAllNotValidValidators
-{
-    NSMutableArray *failed = [NSMutableArray array];
-    for (APValidator *validator in self.validators) {
-        if ((validator.validationState == APValidatorState_NotValid) ||
-            (validator.validationState == APValidatorState_Undefined && validator.isRequired)) {
-            [failed addObject:validator];
-        }
-    }
-    self.failedValidators = [failed copy];
+    self.valid = valid;
 }
 
 #pragma mark - Private
@@ -103,7 +79,7 @@
         validator.validationObject = self.validationObject;
         [notificationCenter addObserver:self
                                selector:@selector(oneOfValidatorsChangedState:)
-                                   name:APValidatorDidChangeStateNotification
+                                   name:APValidatorStateChangedNotification
                                  object:validator];
     }
 }

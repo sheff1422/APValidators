@@ -1,15 +1,15 @@
 //
-// Created by Nickolay Sheika on 25.11.15.
-// Copyright (c) 2015 Alterplay. All rights reserved.
+// Created by Nickolay Sheika on 3/15/16.
+// Copyright (c) 2016 Nickolay Sheika. All rights reserved.
 //
 
 #import <objc/runtime.h>
-#import "UITextField+APValidators.h"
+#import "UITextView+APValidators.h"
 #import "APValidator.h"
 
 
 
-@implementation UITextField (APValidators)
+@implementation UITextView (APValidators)
 
 
 #pragma mark - Lifecycle
@@ -35,14 +35,14 @@
     [validator validate];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(ap_textFieldDidChange:)
-                                                 name:UITextFieldTextDidChangeNotification
+                                             selector:@selector(ap_textViewDidChange:)
+                                                 name:UITextViewTextDidChangeNotification
                                                object:self];
 }
 
 #pragma mark - Notifications
 
-- (void)ap_textFieldDidChange:(NSNotification *)notification
+- (void)ap_textViewDidChange:(NSNotification *)notification
 {
     self.validator.validationObject = self.text;
     [self.validator validate];

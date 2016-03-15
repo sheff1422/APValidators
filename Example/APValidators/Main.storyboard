@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,146 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1DW-xy-aNQ">
+                                <rect key="frame" x="20" y="90" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="validator" destination="h6a-oi-bdu" id="dWf-nZ-hgE"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-Uz-gsp">
+                                <rect key="frame" x="20" y="240" width="126" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MyB-2V-yeC" userLabel="Card Expires Text Field">
+                                <rect key="frame" x="20" y="190" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hn4-Zc-0Xx">
+                                <rect key="frame" x="174" y="240" width="126" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2A-8J-V6z">
+                                <rect key="frame" x="20" y="140" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ZO-Xt-pAK">
+                                <rect key="frame" x="20" y="332" width="280" height="162"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-1l-dSk">
+                                <rect key="frame" x="20" y="290" width="121" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-In-yio">
+                                <rect key="frame" x="20" y="514" width="280" height="34"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButtonTap:" destination="whP-gf-Uak" eventType="touchUpInside" id="hO9-bo-DeF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15F-3X-U5T">
+                                <rect key="frame" x="20" y="40" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="validator" destination="X2S-cg-Equ" id="b3O-Wr-GDL"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kkc-In-yio" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="0UH-Pn-Ltj"/>
+                            <constraint firstAttribute="trailing" secondItem="15F-3X-U5T" secondAttribute="trailing" constant="20" id="0Vs-3t-56k"/>
+                            <constraint firstItem="Kkc-In-yio" firstAttribute="top" secondItem="0ZO-Xt-pAK" secondAttribute="bottom" constant="20" id="5FO-D7-F3N"/>
+                            <constraint firstAttribute="trailing" secondItem="1DW-xy-aNQ" secondAttribute="trailing" constant="20" id="5Xs-yh-gIf"/>
+                            <constraint firstItem="1DW-xy-aNQ" firstAttribute="top" secondItem="15F-3X-U5T" secondAttribute="bottom" constant="20" id="86c-uq-9y4"/>
+                            <constraint firstItem="Hn4-Zc-0Xx" firstAttribute="trailing" secondItem="MyB-2V-yeC" secondAttribute="trailing" id="BUA-Kc-RZU"/>
+                            <constraint firstItem="G1A-Uz-gsp" firstAttribute="width" secondItem="MyB-2V-yeC" secondAttribute="width" multiplier="0.45" id="EnL-dn-Tiq"/>
+                            <constraint firstItem="Cv8-1l-dSk" firstAttribute="top" secondItem="G1A-Uz-gsp" secondAttribute="bottom" constant="20" id="FKO-Gj-8U5"/>
+                            <constraint firstAttribute="trailing" secondItem="Kkc-In-yio" secondAttribute="trailing" constant="20" id="KMV-Vc-ZcL"/>
+                            <constraint firstItem="1DW-xy-aNQ" firstAttribute="leading" secondItem="15F-3X-U5T" secondAttribute="leading" id="KvE-AR-hSC"/>
+                            <constraint firstItem="G1A-Uz-gsp" firstAttribute="top" secondItem="MyB-2V-yeC" secondAttribute="bottom" constant="20" id="MYi-lb-oXQ"/>
+                            <constraint firstItem="G2A-8J-V6z" firstAttribute="trailing" secondItem="1DW-xy-aNQ" secondAttribute="trailing" id="NkC-KE-NH8"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="Kkc-In-yio" secondAttribute="bottom" constant="20" id="Qx7-Yn-TC0"/>
+                            <constraint firstItem="1DW-xy-aNQ" firstAttribute="trailing" secondItem="15F-3X-U5T" secondAttribute="trailing" id="TGU-df-u36"/>
+                            <constraint firstItem="MyB-2V-yeC" firstAttribute="trailing" secondItem="G2A-8J-V6z" secondAttribute="trailing" id="VLu-gG-YOo"/>
+                            <constraint firstItem="1DW-xy-aNQ" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="bFC-pI-kvi"/>
+                            <constraint firstItem="G2A-8J-V6z" firstAttribute="top" secondItem="1DW-xy-aNQ" secondAttribute="bottom" constant="20" id="e2S-3A-aSb"/>
+                            <constraint firstItem="15F-3X-U5T" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="20" id="fHR-yk-edw"/>
+                            <constraint firstItem="0ZO-Xt-pAK" firstAttribute="top" secondItem="Cv8-1l-dSk" secondAttribute="bottom" constant="20" id="lXO-J3-Fys"/>
+                            <constraint firstItem="Hn4-Zc-0Xx" firstAttribute="width" secondItem="MyB-2V-yeC" secondAttribute="width" multiplier="0.45" id="lso-an-oXu"/>
+                            <constraint firstItem="0ZO-Xt-pAK" firstAttribute="leading" secondItem="MyB-2V-yeC" secondAttribute="leading" id="nR3-79-k9S"/>
+                            <constraint firstItem="G2A-8J-V6z" firstAttribute="leading" secondItem="1DW-xy-aNQ" secondAttribute="leading" id="o3V-X8-2LQ"/>
+                            <constraint firstItem="G1A-Uz-gsp" firstAttribute="leading" secondItem="MyB-2V-yeC" secondAttribute="leading" id="qDu-Lg-wsH"/>
+                            <constraint firstItem="Cv8-1l-dSk" firstAttribute="leading" secondItem="G1A-Uz-gsp" secondAttribute="leading" id="qxv-IB-m3m"/>
+                            <constraint firstItem="MyB-2V-yeC" firstAttribute="leading" secondItem="G2A-8J-V6z" secondAttribute="leading" id="sP0-JO-d6a"/>
+                            <constraint firstItem="MyB-2V-yeC" firstAttribute="top" secondItem="G2A-8J-V6z" secondAttribute="bottom" constant="20" id="sZL-j1-KSy"/>
+                            <constraint firstItem="Hn4-Zc-0Xx" firstAttribute="top" secondItem="MyB-2V-yeC" secondAttribute="bottom" constant="20" id="syY-l3-dBK"/>
+                            <constraint firstItem="15F-3X-U5T" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="vml-tr-WCY"/>
+                            <constraint firstItem="0ZO-Xt-pAK" firstAttribute="trailing" secondItem="MyB-2V-yeC" secondAttribute="trailing" id="zko-pm-c4h"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="formValidator" destination="bpR-0b-Cb1" id="jLI-0n-Los"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="iPU-r1-7T2" userLabel="Email Text Field Validator" customClass="APEmailValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Email address is invalid"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="5FR-aa-tf1" customClass="APRequiredValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Email is required"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="X2S-cg-Equ" userLabel="Email Text Field Compound Validator" customClass="APCompoundValidator">
+                    <connections>
+                        <outletCollection property="validators" destination="5FR-aa-tf1" id="NbY-co-Uvu"/>
+                        <outletCollection property="validators" destination="iPU-r1-7T2" id="0fz-Zc-Rhp"/>
+                    </connections>
+                </customObject>
+                <customObject id="zw4-pa-6rB" customClass="APRequiredValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Carholder name is required"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="Hpq-y7-DtZ" userLabel="Card Holder Name Validator" customClass="APRegexValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="regex" value="^[A-Z ]+$"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Cardholder name can only have capital letters and space"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="h6a-oi-bdu" userLabel="Cardholder Compound Validator" customClass="APCompoundValidator">
+                    <connections>
+                        <outletCollection property="validators" destination="zw4-pa-6rB" id="imc-1f-Hhr"/>
+                        <outletCollection property="validators" destination="Hpq-y7-DtZ" id="pMU-du-Nyo"/>
+                    </connections>
+                </customObject>
+                <customObject id="bpR-0b-Cb1" userLabel="Form Validator" customClass="APCompoundValidator">
+                    <connections>
+                        <outletCollection property="validators" destination="X2S-cg-Equ" id="YA7-gp-fWw"/>
+                        <outletCollection property="validators" destination="h6a-oi-bdu" id="NwF-eU-qoJ"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="409.90666666666664"/>
+            <point key="canvasLocation" x="162" y="409"/>
         </scene>
     </scenes>
 </document>

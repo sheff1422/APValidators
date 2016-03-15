@@ -16,17 +16,8 @@
         [NSException raise:NSInvalidArgumentException format:@"Regex validator should have regex before validation!"];
     }
 
-    if ([self.validationObject isKindOfClass:[NSString class]]) {
-        NSString *validationString = self.validationObject;
-        if ([validationString isEqualToString:@""]) {
-            self.validationState = self.required ? APValidatorState_NotValid : APValidatorState_Undefined;
-            return;
-        }
-    }
-
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regex];
-    BOOL validation = [predicate evaluateWithObject:self.validationObject];
-    self.validationState = validation ? APValidatorState_Valid : APValidatorState_NotValid;
+    self.valid = [predicate evaluateWithObject:self.validationObject];
 }
 
 

@@ -7,17 +7,13 @@
 
 @class APValidator;
 
-typedef NS_ENUM(NSUInteger, APValidatorState) {
-    APValidatorState_Undefined = 0,
-    APValidatorState_NotValid,
-    APValidatorState_Valid
-};
-
 typedef void (^APValidatorStateChangeHandler)(APValidator *validator);
-extern NSString *const APValidatorDidChangeStateNotification;
+extern NSString *const APValidatorStateChangedNotification;
+
 
 
 @protocol APDataValidatorDelegate <NSObject>
+
 
 @optional
 - (void)validatorWillChangeState:(APValidator *)validator;
@@ -41,21 +37,14 @@ extern NSString *const APValidatorDidChangeStateNotification;
 @property(nonatomic, strong) id validationObject;
 
 /**
+ *  Stores error message for invalid state
+ */
+@property(nonatomic, copy) IBInspectable NSString *errorMessage;
+
+/**
  *  Delegate
  */
 @property(nonatomic, weak) IBOutlet id <APDataValidatorDelegate> delegate;
-
-/**
- *  Validator is required or not
- *
- *  @default NO
- */
-@property(nonatomic, assign, getter=isRequired) IBInspectable BOOL required;
-
-/**
- *  An array of validation error messages for failed validation
- */
-@property(copy, nonatomic, readonly) NSArray *errorMessages;
 
 /**
  *  If set, the block runs when validation state changes
@@ -65,11 +54,19 @@ extern NSString *const APValidatorDidChangeStateNotification;
 /**
  *  Current validation state
  */
-@property(nonatomic, assign) APValidatorState validationState;
+@property(nonatomic, assign, getter=isValid, readonly) BOOL valid;
 
 /**
  *  Called to validate current validation object
  */
 - (void)validate;
 
+@end
+
+
+// TODO move this
+@interface APValidator (SubclassesOnly)
+
+
+@property(nonatomic, assign, getter=isValid, readwrite) BOOL valid;
 @end

@@ -6,7 +6,6 @@
 #import "APCharactersCountValidator.h"
 
 
-
 @implementation APCharactersCountValidator
 
 
@@ -26,14 +25,8 @@
     return _maxCount;
 }
 
-
 - (void)validate
 {
-    if (! self.validationObject) {
-        self.validationState = APValidatorState_Undefined;
-        return;
-    }
-
     if (! [self.validationObject isKindOfClass:[NSString class]]) {
         [NSException raise:NSInternalInconsistencyException
                     format:@"%@ validationObject should be NSString!",
@@ -42,14 +35,7 @@
 
     NSString *validationObject = self.validationObject;
     NSUInteger length = validationObject.length;
-
-    if (length == 0) {
-        self.validationState = self.isRequired ? APValidatorState_NotValid : APValidatorState_Undefined;
-    }
-    else {
-        BOOL valid = length >= self.minCount && length <= self.maxCount;
-        self.validationState = valid ? APValidatorState_Valid : APValidatorState_NotValid;
-    }
+    self.valid = length >= self.minCount && length <= self.maxCount;
 }
 
 

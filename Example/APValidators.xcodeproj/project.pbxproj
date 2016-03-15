@@ -23,14 +23,16 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		7136EB2F1C96F999006F1EBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7136EB2E1C96F999006F1EBA /* Launch Screen.storyboard */; };
 		716CBD5C1C970FAF00C02C33 /* APCharactersCountValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4B1C970FAF00C02C33 /* APCharactersCountValidator.m */; };
-		716CBD5D1C970FAF00C02C33 /* APCompoundCreditCardValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4D1C970FAF00C02C33 /* APCompoundCreditCardValidator.m */; };
-		716CBD5E1C970FAF00C02C33 /* APCompoundValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */; };
-		716CBD5F1C970FAF00C02C33 /* APCreditCardValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD511C970FAF00C02C33 /* APCreditCardValidator.m */; };
 		716CBD601C970FAF00C02C33 /* APEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD531C970FAF00C02C33 /* APEmailValidator.m */; };
 		716CBD611C970FAF00C02C33 /* APRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD551C970FAF00C02C33 /* APRegexValidator.m */; };
 		716CBD621C970FAF00C02C33 /* APValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD571C970FAF00C02C33 /* APValidator.m */; };
 		716CBD631C970FAF00C02C33 /* UITextField+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */; };
+		B65536C64582DDC95563E5EE /* APBlockValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B655316B292FBABDEF813059 /* APBlockValidator.m */; };
+		B65537C056E0C164E1926A77 /* UITextView+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */; };
+		B65538C377E5601D87EB0CAD /* APCreditCardValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD511C970FAF00C02C33 /* APCreditCardValidator.m */; };
+		B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B65530AE48524DF93BDDD72A /* APRequiredValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +73,6 @@
 		7136EB2E1C96F999006F1EBA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		716CBD4A1C970FAF00C02C33 /* APCharactersCountValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCharactersCountValidator.h; sourceTree = "<group>"; };
 		716CBD4B1C970FAF00C02C33 /* APCharactersCountValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCharactersCountValidator.m; sourceTree = "<group>"; };
-		716CBD4C1C970FAF00C02C33 /* APCompoundCreditCardValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCompoundCreditCardValidator.h; sourceTree = "<group>"; };
-		716CBD4D1C970FAF00C02C33 /* APCompoundCreditCardValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCompoundCreditCardValidator.m; sourceTree = "<group>"; };
 		716CBD4E1C970FAF00C02C33 /* APCompoundValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCompoundValidator.h; sourceTree = "<group>"; };
 		716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCompoundValidator.m; sourceTree = "<group>"; };
 		716CBD501C970FAF00C02C33 /* APCreditCardValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreditCardValidator.h; sourceTree = "<group>"; };
@@ -86,6 +86,12 @@
 		716CBD591C970FAF00C02C33 /* UITextField+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+APValidators.h"; sourceTree = "<group>"; };
 		716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+APValidators.m"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B65530AE48524DF93BDDD72A /* APRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRequiredValidator.m; sourceTree = "<group>"; };
+		B655316B292FBABDEF813059 /* APBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBlockValidator.m; sourceTree = "<group>"; };
+		B655362049D0B57F1E996EC6 /* APBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBlockValidator.h; sourceTree = "<group>"; };
+		B6553B2E185C248D5B860336 /* APRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRequiredValidator.h; sourceTree = "<group>"; };
+		B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+APValidators.m"; sourceTree = "<group>"; };
+		B6553ECDF9ACD6CD4225D379 /* UITextView+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+APValidators.h"; sourceTree = "<group>"; };
 		EF64A6E8928B3DA19F2604D9 /* APValidators.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = APValidators.podspec; path = ../APValidators.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,8 +241,6 @@
 			children = (
 				716CBD4A1C970FAF00C02C33 /* APCharactersCountValidator.h */,
 				716CBD4B1C970FAF00C02C33 /* APCharactersCountValidator.m */,
-				716CBD4C1C970FAF00C02C33 /* APCompoundCreditCardValidator.h */,
-				716CBD4D1C970FAF00C02C33 /* APCompoundCreditCardValidator.m */,
 				716CBD4E1C970FAF00C02C33 /* APCompoundValidator.h */,
 				716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */,
 				716CBD501C970FAF00C02C33 /* APCreditCardValidator.h */,
@@ -248,6 +252,10 @@
 				716CBD561C970FAF00C02C33 /* APValidator.h */,
 				716CBD571C970FAF00C02C33 /* APValidator.m */,
 				716CBD581C970FAF00C02C33 /* Categories */,
+				B65530AE48524DF93BDDD72A /* APRequiredValidator.m */,
+				B6553B2E185C248D5B860336 /* APRequiredValidator.h */,
+				B655316B292FBABDEF813059 /* APBlockValidator.m */,
+				B655362049D0B57F1E996EC6 /* APBlockValidator.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -257,6 +265,8 @@
 			children = (
 				716CBD591C970FAF00C02C33 /* UITextField+APValidators.h */,
 				716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */,
+				B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */,
+				B6553ECDF9ACD6CD4225D379 /* UITextView+APValidators.h */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -411,17 +421,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716CBD5E1C970FAF00C02C33 /* APCompoundValidator.m in Sources */,
 				716CBD621C970FAF00C02C33 /* APValidator.m in Sources */,
 				6003F59E195388D20070C39A /* APAppDelegate.m in Sources */,
-				716CBD5D1C970FAF00C02C33 /* APCompoundCreditCardValidator.m in Sources */,
-				716CBD5F1C970FAF00C02C33 /* APCreditCardValidator.m in Sources */,
 				716CBD611C970FAF00C02C33 /* APRegexValidator.m in Sources */,
 				716CBD601C970FAF00C02C33 /* APEmailValidator.m in Sources */,
 				716CBD631C970FAF00C02C33 /* UITextField+APValidators.m in Sources */,
 				6003F5A7195388D20070C39A /* APViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				716CBD5C1C970FAF00C02C33 /* APCharactersCountValidator.m in Sources */,
+				B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */,
+				B65537C056E0C164E1926A77 /* UITextView+APValidators.m in Sources */,
+				B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */,
+				B65538C377E5601D87EB0CAD /* APCreditCardValidator.m in Sources */,
+				B65536C64582DDC95563E5EE /* APBlockValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
