@@ -13,7 +13,9 @@
 
 @interface APViewController ()
 
+
 @property(strong, nonatomic) IBOutlet APCompoundValidator *formValidator;
+
 
 @end
 
@@ -25,13 +27,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+//    [self.formValidator.validators enumerateObjectsUsingBlock:^(APValidator *validator, NSUInteger idx, BOOL *stop) {
+//        validator.validatorStateChangedHandler = ^(APValidator *validator2) {
+//            ((UITextField *) validator2.control).backgroundColor = validator2.isValid ? [UIColor greenColor] : [UIColor redColor];
+//        };
+//    }];
 }
 
 #pragma mark - Actions
 
 - (IBAction)goButtonTap:(id)sender
 {
+    [self.formValidator validate];
+
     NSLog(@"self.compoundValidator = %@", self.formValidator);
 
     NSString *title = self.formValidator.isValid ? @"Success" : @"Failure";

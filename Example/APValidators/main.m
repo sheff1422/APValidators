@@ -6,12 +6,10 @@
 //  Copyright (c) 2016 Nickolay Sheika. All rights reserved.
 //
 
-@import UIKit;
 #import "APAppDelegate.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char *argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([APAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSClassFromString(@"XCTestCase") != nil ? nil : NSStringFromClass([APAppDelegate class]));
     }
 }

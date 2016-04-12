@@ -32,7 +32,6 @@
 
     validator.control = self;
     validator.validationObject = self.text;
-    [validator validate];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(ap_textFieldDidChange:)
