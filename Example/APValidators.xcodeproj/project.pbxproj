@@ -19,8 +19,8 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		7136EB2F1C96F999006F1EBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7136EB2E1C96F999006F1EBA /* Launch Screen.storyboard */; };
+		71535CA51CBE4B7E00A946D6 /* ZipRegex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71535CA41CBE4B7E00A946D6 /* ZipRegex.plist */; };
 		716CBD5C1C970FAF00C02C33 /* APCharactersCountValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4B1C970FAF00C02C33 /* APCharactersCountValidator.m */; };
 		716CBD601C970FAF00C02C33 /* APEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD531C970FAF00C02C33 /* APEmailValidator.m */; };
 		716CBD611C970FAF00C02C33 /* APRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD551C970FAF00C02C33 /* APRegexValidator.m */; };
@@ -28,6 +28,8 @@
 		716CBD631C970FAF00C02C33 /* UITextField+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */; };
 		716CBD661C99703400C02C33 /* APEqualValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD651C99703400C02C33 /* APEqualValidator.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B65530CF57395F19D9952E44 /* APCountryRegexProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */; };
+		B65532D0EC3447F6FD4DAD21 /* APZipValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553FC0CCD39A03E5091652 /* APZipValidator.m */; };
 		B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */; };
 		B65536C64582DDC95563E5EE /* APBlockValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B655316B292FBABDEF813059 /* APBlockValidator.m */; };
 		B65537C056E0C164E1926A77 /* UITextView+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */; };
@@ -37,6 +39,7 @@
 		B6553C6CDD1E31E0E459D41D /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553F073C7E5C42E95E294D /* APViewController.m */; };
 		B6553E254B1EE0E68FA51D2B /* APCardExpiresTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531D629089219EF193FE8 /* APCardExpiresTextField.m */; };
 		B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B65530AE48524DF93BDDD72A /* APRequiredValidator.m */; };
+		B6553ED1D41D5F13D45D1E2C /* APCountryRegexProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553084F937A06C173C51EC /* APCountryRegexProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +72,9 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		7136EB2E1C96F999006F1EBA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		71535CA41CBE4B7E00A946D6 /* ZipRegex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZipRegex.plist; sourceTree = "<group>"; };
 		716CBD4A1C970FAF00C02C33 /* APCharactersCountValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCharactersCountValidator.h; sourceTree = "<group>"; };
 		716CBD4B1C970FAF00C02C33 /* APCharactersCountValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCharactersCountValidator.m; sourceTree = "<group>"; };
 		716CBD4E1C970FAF00C02C33 /* APCompoundValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCompoundValidator.h; sourceTree = "<group>"; };
@@ -90,19 +93,24 @@
 		716CBD651C99703400C02C33 /* APEqualValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEqualValidator.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B6553040B47EEF36EEF99FEC /* APIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIndicatorView.h; sourceTree = "<group>"; };
+		B6553084F937A06C173C51EC /* APCountryRegexProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryRegexProvider.m; sourceTree = "<group>"; };
 		B65530AE48524DF93BDDD72A /* APRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRequiredValidator.m; sourceTree = "<group>"; };
+		B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryRegexProviderTests.m; sourceTree = "<group>"; };
 		B655316B292FBABDEF813059 /* APBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBlockValidator.m; sourceTree = "<group>"; };
 		B65531D54DA0976AD8408C27 /* APKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APKeyboardController.h; sourceTree = "<group>"; };
 		B65531D629089219EF193FE8 /* APCardExpiresTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCardExpiresTextField.m; sourceTree = "<group>"; };
 		B655328725641B60EEB6FBAE /* APViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
 		B655340E09885D5DA6C77BA4 /* APKeyboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APKeyboardController.m; sourceTree = "<group>"; };
 		B655362049D0B57F1E996EC6 /* APBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBlockValidator.h; sourceTree = "<group>"; };
+		B65536688DBA4CBE51B70E8E /* APZipValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APZipValidator.h; sourceTree = "<group>"; };
 		B65537FE37ECADFCA1202648 /* APCardExpiresTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCardExpiresTextField.h; sourceTree = "<group>"; };
 		B6553B2E185C248D5B860336 /* APRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRequiredValidator.h; sourceTree = "<group>"; };
 		B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+APValidators.m"; sourceTree = "<group>"; };
+		B6553D53F5651A9A58FD0F0B /* APCountryRegexProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountryRegexProvider.h; sourceTree = "<group>"; };
 		B6553E8D8425148B069CF7F5 /* APIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIndicatorView.m; sourceTree = "<group>"; };
 		B6553ECDF9ACD6CD4225D379 /* UITextView+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+APValidators.h"; sourceTree = "<group>"; };
 		B6553F073C7E5C42E95E294D /* APViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
+		B6553FC0CCD39A03E5091652 /* APZipValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APZipValidator.m; sourceTree = "<group>"; };
 		B6C1921ACDFD8AC89BAC7463 /* Pods-APValidators_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APValidators_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF64A6E8928B3DA19F2604D9 /* APValidators.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = APValidators.podspec; path = ../APValidators.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,8 +208,8 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -274,6 +282,9 @@
 				B6553B2E185C248D5B860336 /* APRequiredValidator.h */,
 				B655316B292FBABDEF813059 /* APBlockValidator.m */,
 				B655362049D0B57F1E996EC6 /* APBlockValidator.h */,
+				B6553FC0CCD39A03E5091652 /* APZipValidator.m */,
+				B65536688DBA4CBE51B70E8E /* APZipValidator.h */,
+				B6553809A587578A8823A2C5 /* Helpers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -298,12 +309,30 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B6553809A587578A8823A2C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B6553DD6C5E6CAF3141A20F5 /* CountryRegexLoader */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B65539CD5DA1FBC8DF60478A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				B6553EA7455B2F9D281C3CC5 /* KeyboardController */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B6553DD6C5E6CAF3141A20F5 /* CountryRegexLoader */ = {
+			isa = PBXGroup;
+			children = (
+				B6553084F937A06C173C51EC /* APCountryRegexProvider.m */,
+				B6553D53F5651A9A58FD0F0B /* APCountryRegexProvider.h */,
+				71535CA41CBE4B7E00A946D6 /* ZipRegex.plist */,
+			);
+			path = CountryRegexLoader;
 			sourceTree = "<group>";
 		};
 		B6553EA7455B2F9D281C3CC5 /* KeyboardController */ = {
@@ -382,8 +411,6 @@
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* APValidators_Example */,
@@ -400,6 +427,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				7136EB2F1C96F999006F1EBA /* Launch Screen.storyboard in Resources */,
+				71535CA51CBE4B7E00A946D6 /* ZipRegex.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +512,8 @@
 				B6553C6CDD1E31E0E459D41D /* APViewController.m in Sources */,
 				B6553E254B1EE0E68FA51D2B /* APCardExpiresTextField.m in Sources */,
 				B6553AC6BB406B959B1DD36D /* APKeyboardController.m in Sources */,
+				B65532D0EC3447F6FD4DAD21 /* APZipValidator.m in Sources */,
+				B6553ED1D41D5F13D45D1E2C /* APCountryRegexProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				B65530CF57395F19D9952E44 /* APCountryRegexProviderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

@@ -166,10 +166,13 @@
                                             <constraint firstItem="5c9-5g-iQa" firstAttribute="centerY" secondItem="tLb-Hb-dnt" secondAttribute="centerY" id="dRb-Uq-Z6s"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxt-DK-EI4" userLabel="Zip Text Field">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="US Zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxt-DK-EI4" userLabel="Zip Text Field">
                                         <rect key="frame" x="174" y="290" width="126" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="validator" destination="B2c-w9-EbG" id="Qhx-IW-Kcn"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r69-0b-jkX" userLabel="Additional Info Label">
                                         <rect key="frame" x="20" y="340" width="103" height="18"/>
@@ -367,6 +370,15 @@
                         <outlet property="delegate" destination="3Td-b2-2G6" id="LzB-3N-5iV"/>
                     </connections>
                 </customObject>
+                <customObject id="B2c-w9-EbG" userLabel="Zip Validator" customClass="APZipValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="countryCode" value="US"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Zip code has invalid format"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="xEr-ZL-vfz" id="mEU-9t-2Sz"/>
+                    </connections>
+                </customObject>
                 <customObject id="bpR-0b-Cb1" userLabel="Form Validator" customClass="APCompoundValidator">
                     <connections>
                         <outletCollection property="validators" destination="X2S-cg-Equ" id="CrM-su-pA1"/>
@@ -374,6 +386,7 @@
                         <outletCollection property="validators" destination="h6a-oi-bdu" id="Thd-5h-m5A"/>
                         <outletCollection property="validators" destination="f5f-a1-h4n" id="Ahw-hp-kq0"/>
                         <outletCollection property="validators" destination="qYc-HZ-iSR" id="ihC-vd-U4B"/>
+                        <outletCollection property="validators" destination="B2c-w9-EbG" id="nm8-d9-6c7"/>
                     </connections>
                 </customObject>
                 <customObject id="2fo-uh-1oY" customClass="APKeyboardController">
