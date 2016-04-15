@@ -8,13 +8,19 @@
 static NSString *const APEmailValidatorRegex = @"^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,4})$";
 
 
-
 @implementation APEmailValidator
 
 
-- (NSString *)regex
+- (void)validate
 {
-    return APEmailValidatorRegex;
+    [super validate];
+
+    APRegexValidator *regexValidator = [APRegexValidator new];
+    regexValidator.regex = APEmailValidatorRegex;
+    regexValidator.validationObject = self.validationObject;
+    [regexValidator validate];
+
+    self.valid = regexValidator.isValid;
 }
 
 @end

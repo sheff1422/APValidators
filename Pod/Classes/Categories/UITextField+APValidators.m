@@ -11,12 +11,12 @@
 
 @implementation UITextField (APValidators)
 
-
 #pragma mark - Lifecycle
 
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self removeObserver:self forKeyPath:@"text"];
 }
 
 #pragma mark - Accessors
@@ -33,15 +33,39 @@
     validator.control = self;
     validator.validationObject = self.text;
 
+    [self addObserver:self
+           forKeyPath:@"text"
+              options:NSKeyValueObservingOptionNew
+              context:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(ap_textFieldDidChange:)
                                                  name:UITextFieldTextDidChangeNotification
                                                object:self];
 }
 
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([object isEqual:self] && [keyPath isEqualToString:@"text"]) {
+        [self ap_validate];
+    }
+}
+
 #pragma mark - Notifications
 
 - (void)ap_textFieldDidChange:(NSNotification *)notification
+{
+    [self ap_validate];
+}
+
+#pragma mark - Private
+
+- (void)ap_validate
 {
     self.validator.validationObject = self.text;
     [self.validator validate];

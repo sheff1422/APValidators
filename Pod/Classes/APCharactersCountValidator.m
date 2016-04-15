@@ -6,6 +6,7 @@
 #import "APCharactersCountValidator.h"
 
 
+
 @implementation APCharactersCountValidator
 
 
@@ -35,7 +36,11 @@
 
     NSString *validationObject = self.validationObject;
     NSUInteger length = validationObject.length;
-    self.valid = length >= self.minCount && length <= self.maxCount;
+
+    BOOL moreThanMinCount = length >= self.minCount;
+    BOOL lessThanMaxCount = length <= self.maxCount;
+
+    self.valid = moreThanMinCount && lessThanMaxCount;
 }
 
 

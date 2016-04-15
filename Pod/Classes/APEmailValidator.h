@@ -8,7 +8,7 @@
 
 
 
-@interface APEmailValidator : APRegexValidator
+@interface APEmailValidator : APValidator
 
 
 

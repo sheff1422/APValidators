@@ -67,7 +67,7 @@ NSString *const APValidatorStateChangedNotification = @"APValidatorStateChangedN
 
 - (NSString *)description
 {
-    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@:  ", NSStringFromClass([self class])];
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@ - %@:  ", NSStringFromClass([self class]), [super description]];
     [description appendFormat:@"State = %@;  ", self.isValid ? @"Valid" : @"Not Valid"];
     [description appendFormat:@"Object = %@;", self.validationObject ? self.validationObject : @"Nil"];
     [description appendString:@">"];

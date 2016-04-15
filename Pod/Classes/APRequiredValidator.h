@@ -8,5 +8,5 @@
 
 
 
-@interface APRequiredValidator : APCharactersCountValidator
+@interface APRequiredValidator : APValidator
 @end

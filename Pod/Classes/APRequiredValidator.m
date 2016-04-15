@@ -9,9 +9,16 @@
 @implementation APRequiredValidator
 
 
-- (NSUInteger)minCount
+- (void)validate
 {
-    return 1;
+    [super validate];
+
+    APCharactersCountValidator *charactersCountValidator = [APCharactersCountValidator new];
+    charactersCountValidator.minCount = 1;
+    charactersCountValidator.validationObject = self.validationObject;
+    [charactersCountValidator validate];
+
+    self.valid = charactersCountValidator.isValid;
 }
 
 

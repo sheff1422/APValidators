@@ -43,7 +43,7 @@
         self.hasDivider = YES;
     }
     else if (currentTextLength == 2 && self.hasDivider) {
-        self.text = [currentText substringToIndex:currentTextLength - 1];
+        self.text = [currentText substringToIndex:2];
         self.hasDivider = NO;
     }
     else if (currentTextLength > 5) {

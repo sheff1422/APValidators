@@ -28,16 +28,18 @@
 		716CBD631C970FAF00C02C33 /* UITextField+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */; };
 		716CBD661C99703400C02C33 /* APEqualValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD651C99703400C02C33 /* APEqualValidator.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B65530AEDF65DBB909104E3B /* APViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B65534F7EF453C3C5579398A /* APViewController+Alerts.m */; };
 		B65530CF57395F19D9952E44 /* APCountryRegexProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */; };
+		B65531F151FD57BD7B347DBC /* APCardExpiresTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B65533D2AD051C2DC5C6B7A8 /* APCardExpiresTextField.m */; };
 		B65532D0EC3447F6FD4DAD21 /* APZipValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553FC0CCD39A03E5091652 /* APZipValidator.m */; };
 		B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */; };
 		B65536C64582DDC95563E5EE /* APBlockValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B655316B292FBABDEF813059 /* APBlockValidator.m */; };
 		B65537C056E0C164E1926A77 /* UITextView+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */; };
 		B65538C377E5601D87EB0CAD /* APCreditCardValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD511C970FAF00C02C33 /* APCreditCardValidator.m */; };
-		B6553A58EF5B48587152D205 /* APIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553E8D8425148B069CF7F5 /* APIndicatorView.m */; };
 		B6553AC6BB406B959B1DD36D /* APKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B655340E09885D5DA6C77BA4 /* APKeyboardController.m */; };
 		B6553C6CDD1E31E0E459D41D /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553F073C7E5C42E95E294D /* APViewController.m */; };
-		B6553E254B1EE0E68FA51D2B /* APCardExpiresTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531D629089219EF193FE8 /* APCardExpiresTextField.m */; };
+		B6553CA4FF57A977650ADCF2 /* APIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531FC491768F0C953417D /* APIndicatorView.m */; };
+		B6553CFEAE3C90B43336FE9D /* APCVVTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553CC52A34271BEEFF1154 /* APCVVTextField.m */; };
 		B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B65530AE48524DF93BDDD72A /* APRequiredValidator.m */; };
 		B6553ED1D41D5F13D45D1E2C /* APCountryRegexProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553084F937A06C173C51EC /* APCountryRegexProvider.m */; };
 /* End PBXBuildFile section */
@@ -92,22 +94,26 @@
 		716CBD641C99703400C02C33 /* APEqualValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEqualValidator.h; sourceTree = "<group>"; };
 		716CBD651C99703400C02C33 /* APEqualValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEqualValidator.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B6553040B47EEF36EEF99FEC /* APIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIndicatorView.h; sourceTree = "<group>"; };
 		B6553084F937A06C173C51EC /* APCountryRegexProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryRegexProvider.m; sourceTree = "<group>"; };
 		B65530AE48524DF93BDDD72A /* APRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRequiredValidator.m; sourceTree = "<group>"; };
+		B65530FECCE3AA2DF5BC18B4 /* APViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APViewController+Alerts.h"; sourceTree = "<group>"; };
 		B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryRegexProviderTests.m; sourceTree = "<group>"; };
 		B655316B292FBABDEF813059 /* APBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBlockValidator.m; sourceTree = "<group>"; };
 		B65531D54DA0976AD8408C27 /* APKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APKeyboardController.h; sourceTree = "<group>"; };
-		B65531D629089219EF193FE8 /* APCardExpiresTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCardExpiresTextField.m; sourceTree = "<group>"; };
+		B65531FC491768F0C953417D /* APIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIndicatorView.m; sourceTree = "<group>"; };
 		B655328725641B60EEB6FBAE /* APViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
+		B65533D2AD051C2DC5C6B7A8 /* APCardExpiresTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCardExpiresTextField.m; sourceTree = "<group>"; };
 		B655340E09885D5DA6C77BA4 /* APKeyboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APKeyboardController.m; sourceTree = "<group>"; };
+		B65534CADDE78DE42E40536B /* APIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIndicatorView.h; sourceTree = "<group>"; };
+		B65534F7EF453C3C5579398A /* APViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "APViewController+Alerts.m"; sourceTree = "<group>"; };
 		B655362049D0B57F1E996EC6 /* APBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBlockValidator.h; sourceTree = "<group>"; };
 		B65536688DBA4CBE51B70E8E /* APZipValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APZipValidator.h; sourceTree = "<group>"; };
-		B65537FE37ECADFCA1202648 /* APCardExpiresTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCardExpiresTextField.h; sourceTree = "<group>"; };
+		B65537346CFB72499D9D2872 /* APCardExpiresTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCardExpiresTextField.h; sourceTree = "<group>"; };
+		B6553817455B8348BBE15914 /* APCVVTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCVVTextField.h; sourceTree = "<group>"; };
 		B6553B2E185C248D5B860336 /* APRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRequiredValidator.h; sourceTree = "<group>"; };
 		B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+APValidators.m"; sourceTree = "<group>"; };
+		B6553CC52A34271BEEFF1154 /* APCVVTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCVVTextField.m; sourceTree = "<group>"; };
 		B6553D53F5651A9A58FD0F0B /* APCountryRegexProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountryRegexProvider.h; sourceTree = "<group>"; };
-		B6553E8D8425148B069CF7F5 /* APIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIndicatorView.m; sourceTree = "<group>"; };
 		B6553ECDF9ACD6CD4225D379 /* UITextView+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+APValidators.h"; sourceTree = "<group>"; };
 		B6553F073C7E5C42E95E294D /* APViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
 		B6553FC0CCD39A03E5091652 /* APZipValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APZipValidator.m; sourceTree = "<group>"; };
@@ -183,12 +189,10 @@
 				7136EB2E1C96F999006F1EBA /* Launch Screen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				B6553E8D8425148B069CF7F5 /* APIndicatorView.m */,
-				B6553040B47EEF36EEF99FEC /* APIndicatorView.h */,
 				B655367C0068FFC04EE3864D /* ViewControllers */,
-				B65531D629089219EF193FE8 /* APCardExpiresTextField.m */,
-				B65537FE37ECADFCA1202648 /* APCardExpiresTextField.h */,
 				B65539CD5DA1FBC8DF60478A /* Helpers */,
+				B65531063052B1FE9BFF5E6C /* View */,
+				B6553F96684EE51D3CC11DE9 /* Categories */,
 			);
 			name = "Example for APValidators";
 			path = APValidators;
@@ -300,6 +304,28 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		B65531063052B1FE9BFF5E6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B65534CADDE78DE42E40536B /* APIndicatorView.h */,
+				B65537346CFB72499D9D2872 /* APCardExpiresTextField.h */,
+				B65533D2AD051C2DC5C6B7A8 /* APCardExpiresTextField.m */,
+				B65531FC491768F0C953417D /* APIndicatorView.m */,
+				B6553CC52A34271BEEFF1154 /* APCVVTextField.m */,
+				B6553817455B8348BBE15914 /* APCVVTextField.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B655318684924E79002A654E /* APViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B65534F7EF453C3C5579398A /* APViewController+Alerts.m */,
+				B65530FECCE3AA2DF5BC18B4 /* APViewController+Alerts.h */,
+			);
+			path = APViewController;
+			sourceTree = "<group>";
+		};
 		B655367C0068FFC04EE3864D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +368,14 @@
 				B655340E09885D5DA6C77BA4 /* APKeyboardController.m */,
 			);
 			path = KeyboardController;
+			sourceTree = "<group>";
+		};
+		B6553F96684EE51D3CC11DE9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B655318684924E79002A654E /* APViewController */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,12 +542,14 @@
 				B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */,
 				B65538C377E5601D87EB0CAD /* APCreditCardValidator.m in Sources */,
 				B65536C64582DDC95563E5EE /* APBlockValidator.m in Sources */,
-				B6553A58EF5B48587152D205 /* APIndicatorView.m in Sources */,
 				B6553C6CDD1E31E0E459D41D /* APViewController.m in Sources */,
-				B6553E254B1EE0E68FA51D2B /* APCardExpiresTextField.m in Sources */,
 				B6553AC6BB406B959B1DD36D /* APKeyboardController.m in Sources */,
 				B65532D0EC3447F6FD4DAD21 /* APZipValidator.m in Sources */,
 				B6553ED1D41D5F13D45D1E2C /* APCountryRegexProvider.m in Sources */,
+				B65531F151FD57BD7B347DBC /* APCardExpiresTextField.m in Sources */,
+				B6553CA4FF57A977650ADCF2 /* APIndicatorView.m in Sources */,
+				B6553CFEAE3C90B43336FE9D /* APCVVTextField.m in Sources */,
+				B65530AEDF65DBB909104E3B /* APViewController+Alerts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

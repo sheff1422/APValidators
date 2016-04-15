@@ -49,7 +49,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0J-lS-pbL" userLabel="Confirm Email Address Text Field">
                                         <rect key="frame" x="20" y="90" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
                                             <outlet property="validator" destination="l5L-Qi-7Mt" id="K4L-7c-0zu"/>
                                         </connections>
@@ -121,10 +121,13 @@
                                             <constraint firstItem="kSt-yG-85o" firstAttribute="centerY" secondItem="gbD-Qr-qlt" secondAttribute="centerY" id="KG9-eu-MKq"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01/17" borderStyle="roundedRect" placeholder="Expiration Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eak-dC-nyN" userLabel="Expiration Date Text Field" customClass="APCardExpiresTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Date - MM/YY Format" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eak-dC-nyN" userLabel="Expiration Date Text Field" customClass="APCardExpiresTextField">
                                         <rect key="frame" x="20" y="240" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="validator" destination="qYc-HZ-iSR" id="lr9-bS-IxI"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRT-n4-tsl" userLabel="Indicator Container View">
                                         <rect key="frame" x="300" y="240" width="20" height="30"/>
@@ -143,11 +146,6 @@
                                             <constraint firstItem="3Td-b2-2G6" firstAttribute="centerX" secondItem="FRT-n4-tsl" secondAttribute="centerX" id="h9V-nh-31K"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2X-i5-9Dm" userLabel="CVV Text Field">
-                                        <rect key="frame" x="20" y="290" width="126" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLb-Hb-dnt" userLabel="Indicator Container View">
                                         <rect key="frame" x="146" y="290" width="20" height="30"/>
                                         <subviews>
@@ -212,6 +210,14 @@
                                             <constraint firstItem="xEr-ZL-vfz" firstAttribute="centerX" secondItem="BG4-Pa-t0p" secondAttribute="centerX" id="ejl-Sf-c0D"/>
                                         </constraints>
                                     </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2X-i5-9Dm" userLabel="CVV Text Field" customClass="APCVVTextField">
+                                        <rect key="frame" x="20" y="290" width="126" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="validator" destination="7Bk-gI-9hE" id="uWE-SE-dKh"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -309,7 +315,7 @@
                         <outletCollection property="validators" destination="iPU-r1-7T2" id="0fz-Zc-Rhp"/>
                     </connections>
                 </customObject>
-                <customObject id="uQv-hC-vty" userLabel="Required Confirm Email Validator" customClass="APRequiredValidator">
+                <customObject id="uQv-hC-vty" userLabel="Confirm Email Required Validator" customClass="APRequiredValidator">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Confirm Email is required"/>
                     </userDefinedRuntimeAttributes>
@@ -318,6 +324,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Emails must be equal"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="secondControl" destination="1Vg-uv-u11" id="yPg-wL-1et"/>
+                    </connections>
                 </customObject>
                 <customObject id="l5L-Qi-7Mt" userLabel="Confirm Email Compound Validator" customClass="APCompoundValidator">
                     <connections>
@@ -361,6 +370,24 @@
                         <outletCollection property="validators" destination="yUR-B7-vC4" id="RGo-0Z-6iv"/>
                     </connections>
                 </customObject>
+                <customObject id="gPS-cq-ZtA" userLabel="CVV Required Validator" customClass="APRequiredValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="CVV is required"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="M9t-Sw-Xb4" userLabel="CVV Validator" customClass="APRegexValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="regex" value="^[0-9]{3}$"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="CVV can only have 3 digits"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="7Bk-gI-9hE" userLabel="CVV Compound Validator" customClass="APCompoundValidator">
+                    <connections>
+                        <outlet property="delegate" destination="5c9-5g-iQa" id="mbP-El-wIt"/>
+                        <outletCollection property="validators" destination="gPS-cq-ZtA" id="oe6-CQ-Hav"/>
+                        <outletCollection property="validators" destination="M9t-Sw-Xb4" id="DRE-PF-3Pb"/>
+                    </connections>
+                </customObject>
                 <customObject id="qYc-HZ-iSR" userLabel="Expiration Date Validator" customClass="APRegexValidator">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="regex" value="^(0[1-9]|1[0-2])\/?([0-9]{2})"/>
@@ -387,6 +414,7 @@
                         <outletCollection property="validators" destination="f5f-a1-h4n" id="Ahw-hp-kq0"/>
                         <outletCollection property="validators" destination="qYc-HZ-iSR" id="ihC-vd-U4B"/>
                         <outletCollection property="validators" destination="B2c-w9-EbG" id="nm8-d9-6c7"/>
+                        <outletCollection property="validators" destination="7Bk-gI-9hE" id="zhT-yp-ejM"/>
                     </connections>
                 </customObject>
                 <customObject id="2fo-uh-1oY" customClass="APKeyboardController">

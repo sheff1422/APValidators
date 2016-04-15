@@ -88,6 +88,7 @@
 
 - (void)oneOfValidatorsChangedState:(NSNotification *)notification
 {
+    [self validate];
     [self checkAllValidatorsAndUpdateState];
 }
 

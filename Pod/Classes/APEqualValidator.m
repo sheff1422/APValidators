@@ -56,7 +56,7 @@
 
 - (void)ap_textFieldDidChange:(NSNotification *)notification
 {
-    [self validate];
+
 }
 
 - (void)ap_textViewDidChange:(NSNotification *)notification
