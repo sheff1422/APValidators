@@ -5,7 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class APValidator;
+
 
 
 @interface UITextView (APValidators)
+
+@property(nonatomic, strong) IBOutlet APValidator *validator;
+
 @end

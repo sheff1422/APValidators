@@ -15,10 +15,15 @@
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.notificationCenter removeObserver:self];
 }
 
 #pragma mark - Accessors
+
+- (NSNotificationCenter *)notificationCenter
+{
+    return [NSNotificationCenter defaultCenter];
+}
 
 - (void)setValidators:(NSArray *)validators
 {
@@ -73,15 +78,14 @@
 
 - (void)setupAllValidators
 {
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter removeObserver:self];
+    [self.notificationCenter removeObserver:self];
 
     for (APValidator *validator in self.validators) {
         validator.validationObject = self.validationObject;
-        [notificationCenter addObserver:self
-                               selector:@selector(oneOfValidatorsChangedState:)
-                                   name:APValidatorStateChangedNotification
-                                 object:validator];
+        [self.notificationCenter addObserver:self
+                                    selector:@selector(oneOfValidatorsChangedState:)
+                                        name:APValidatorStateChangedNotification
+                                      object:validator];
     }
 }
 

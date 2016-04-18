@@ -92,4 +92,9 @@
     }).to.notify(APValidatorStateChangedNotification);
 }
 
+- (void)testReturnsDescription
+{
+    expect(self.validator.description).toNot.beNil();
+}
+
 @end

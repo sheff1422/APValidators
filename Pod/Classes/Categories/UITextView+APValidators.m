@@ -17,6 +17,13 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    @try {
+        [self removeObserver:self forKeyPath:@"text"];
+    }
+    @catch (id anException) {
+        // do nothing
+    }
 }
 
 #pragma mark - Accessors
@@ -33,15 +40,39 @@
     validator.control = self;
     validator.validationObject = self.text;
 
+    [self addObserver:self
+           forKeyPath:@"text"
+              options:NSKeyValueObservingOptionNew
+              context:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(ap_textViewDidChange:)
                                                  name:UITextViewTextDidChangeNotification
                                                object:self];
 }
 
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([object isEqual:self] && [keyPath isEqualToString:@"text"]) {
+        [self ap_validate];
+    }
+}
+
 #pragma mark - Notifications
 
 - (void)ap_textViewDidChange:(NSNotification *)notification
+{
+    [self ap_validate];
+}
+
+#pragma mark - Private
+
+- (void)ap_validate
 {
     self.validator.validationObject = self.text;
     [self.validator validate];

@@ -17,12 +17,3 @@
 @property(nonatomic, strong, readonly) NSArray *errorMessages;
 
 @end
-
-
-
-//@interface APCompoundValidator (SubclassesOnly)
-//
-//
-//- (void)checkAllValidatorsAndUpdateState;
-//
-//@end
