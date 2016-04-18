@@ -9,17 +9,9 @@
 
 
 #import "APZipValidator.h"
-#import "APRegexValidator.h"
 #import "APCountryRegexProvider.h"
 #import "APStringValidatorTestCase.h"
-
-
-
-@interface APZipValidator (UnitTests)
-
-
-@property(nonatomic, strong) APRegexValidator *regexValidator;
-@end
+#import "NSPredicate+APValidators.h"
 
 
 
@@ -31,7 +23,6 @@
 
 #pragma mark - Mocks
 @property(nonatomic, strong) id regexProviderMock;
-@property(nonatomic, strong) id regexValidatorMock;
 @end
 
 
@@ -44,56 +35,36 @@
     [super setUp];
 
     self.regexProviderMock = [OCMockObject niceMockForClass:[APCountryRegexProvider class]];
-    self.regexValidatorMock = [OCMockObject niceMockForClass:[APRegexValidator class]];
 
     self.validator = [APZipValidator new];
     self.zipValidator = (APZipValidator *) self.validator;
-    self.zipValidator.regexValidator = self.regexValidatorMock;
 }
 
 #pragma mark - Tests
 
-- (void)testSetupsRegexValidatorWithProperRegex
+- (void)testTakesRegexFromProvider
 {
     // given
-    NSString *regexStub = @"14/88";
-    NSString *countryCode = @"US";
+    NSString *countryCode = @"UA";
 
     // stubs and mocks
-    [[[self.regexProviderMock stub] andReturn:regexStub] regexForCountryWithCode:countryCode];
-    [[self.regexValidatorMock expect] setRegex:regexStub];
+    [[self.regexProviderMock expect] regexForCountryWithCode:countryCode];
 
     // call
     self.zipValidator.countryCode = countryCode;
+    [self.zipValidator validate];
 
     // expectations
-    [self.regexValidatorMock verify];
+    [self.regexProviderMock verify];
 }
 
-- (void)testSetupsRegexValidatorWithNilRegexIfCountryCodeIsNotSupported
+- (void)testNotValidForNotSupportedCountryCode
 {
     // given
-    NSString *countryCode = @"USA";
+    NSString *countryCode = @"Test";
 
     // stubs and mocks
     [[[self.regexProviderMock stub] andReturn:nil] regexForCountryWithCode:countryCode];
-    [[self.regexValidatorMock expect] setRegex:nil];
-
-    // call
-    self.zipValidator.countryCode = countryCode;
-
-    // expectations
-    [self.regexValidatorMock verify];
-}
-
-- (void)testNotValidIfCountryCodeIsNotSupported
-{
-    // given
-    NSString *countryCode = @"USA";
-
-    // stubs and mocks
-    [[[self.regexProviderMock stub] andReturn:nil] regexForCountryWithCode:countryCode];
-    [[[self.regexValidatorMock stub] andReturn:nil] regex];
 
     // call
     self.zipValidator.countryCode = countryCode;
@@ -103,26 +74,40 @@
     expect(self.zipValidator.isValid).to.beFalsy();
 }
 
-- (void)testValidate
+- (void)testValidatesOverProperRegex_True
 {
     // given
-    NSString *regexStub = @"14/88";
-    NSString *validationObject = @"ZIP";
+    NSString *countryCode = @"Test";
+    NSString *regex = @"1";
 
     // stubs and mocks
-    [[[self.regexProviderMock stub] andReturn:nil] regexForCountryWithCode:[OCMArg any]];
-    [[[self.regexValidatorMock stub] andReturn:regexStub] regex];
-    [[self.regexValidatorMock expect] setValidationObject:validationObject];
-    [[self.regexValidatorMock expect] validate];
-    [[[self.regexValidatorMock stub] andReturnValue:OCMOCK_VALUE(YES)] isValid];
+    [[[self.regexProviderMock stub] andReturn:regex] regexForCountryWithCode:countryCode];
 
     // call
-    self.zipValidator.validationObject = validationObject;
+    self.zipValidator.countryCode = countryCode;
+    self.zipValidator.validationObject = @"1";
     [self.zipValidator validate];
 
     // expectations
-    [self.regexValidatorMock verify];
     expect(self.zipValidator.isValid).to.beTruthy();
+}
+
+- (void)testValidatesOverProperRegex_False
+{
+    // given
+    NSString *countryCode = @"Test";
+    NSString *regex = @"1";
+
+    // stubs and mocks
+    [[[self.regexProviderMock stub] andReturn:regex] regexForCountryWithCode:countryCode];
+
+    // call
+    self.zipValidator.countryCode = countryCode;
+    self.zipValidator.validationObject = @"1488";
+    [self.zipValidator validate];
+
+    // expectations
+    expect(self.zipValidator.isValid).to.beFalsy();
 }
 
 @end

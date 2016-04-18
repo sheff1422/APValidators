@@ -7,6 +7,8 @@
 #import "APStringValidator.h"
 
 
+extern NSString *const APEmailValidatorRegex;
+
 
 @interface APEmailValidator : APStringValidator
 

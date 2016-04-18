@@ -25,7 +25,7 @@ NSString *const APValidatorStateChangedNotification = @"APValidatorStateChangedN
 {
     self = [super init];
     if (self) {
-        self.valid = YES;
+        _valid = YES;
     }
     return self;
 }

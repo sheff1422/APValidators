@@ -26,25 +26,33 @@
 		716CBD611C970FAF00C02C33 /* APRegexValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD551C970FAF00C02C33 /* APRegexValidator.m */; };
 		716CBD621C970FAF00C02C33 /* APValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD571C970FAF00C02C33 /* APValidator.m */; };
 		716CBD631C970FAF00C02C33 /* UITextField+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */; };
-		716CBD661C99703400C02C33 /* APEqualValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD651C99703400C02C33 /* APEqualValidator.m */; };
+		716CBD661C99703400C02C33 /* APEqualStringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD651C99703400C02C33 /* APEqualStringValidator.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B65530777BC9D87FF5857268 /* APStringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B655345F83751FE8F168EBFF /* APStringValidator.m */; };
 		B65530AEDF65DBB909104E3B /* APViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B65534F7EF453C3C5579398A /* APViewController+Alerts.m */; };
 		B65530CF57395F19D9952E44 /* APCountryRegexProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */; };
 		B655312A8048620D322D0BB2 /* APCreditCardValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65533CCF2A0951E5D3CA153 /* APCreditCardValidatorTests.m */; };
+		B6553163696DA033BFC70601 /* APCompoundValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B655399C81871529BD9FB901 /* APCompoundValidatorTests.m */; };
 		B655318A1D47AD9E4A4CDD97 /* NSPredicate+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = B655338CEA9147E9B765F182 /* NSPredicate+APValidators.m */; };
 		B65531F151FD57BD7B347DBC /* APCardExpiresTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B65533D2AD051C2DC5C6B7A8 /* APCardExpiresTextField.m */; };
 		B65532D0EC3447F6FD4DAD21 /* APZipValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553FC0CCD39A03E5091652 /* APZipValidator.m */; };
+		B65533C11DD3C535B3EFCDBD /* APRegexValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65538688F9BFE60244A59C0 /* APRegexValidatorTests.m */; };
+		B65534D3C3C918CFB38158FF /* APValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65537501B942649A38950F0 /* APValidatorTests.m */; };
 		B65536264FE0648C827B00BD /* APValidator+SubclassesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C46BA355AF730BE9D6D /* APValidator+SubclassesOnly.m */; };
 		B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD4F1C970FAF00C02C33 /* APCompoundValidator.m */; };
 		B65536C64582DDC95563E5EE /* APBlockValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B655316B292FBABDEF813059 /* APBlockValidator.m */; };
 		B65537C056E0C164E1926A77 /* UITextView+APValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */; };
 		B65538C377E5601D87EB0CAD /* APCreditCardValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CBD511C970FAF00C02C33 /* APCreditCardValidator.m */; };
+		B65538E08B96ED3D3F42C0B0 /* APEqualValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553E31064586C50D75B165 /* APEqualValidatorTests.m */; };
+		B65539F60D47CF2E079EF1DB /* APCharactersCountValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65530B6B34785C286999A63 /* APCharactersCountValidatorTests.m */; };
 		B65539FD2267326E8BF37F8D /* APStringValidatorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C2EAD833891B710E460 /* APStringValidatorTestCase.m */; };
 		B6553AC6BB406B959B1DD36D /* APKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B655340E09885D5DA6C77BA4 /* APKeyboardController.m */; };
 		B6553C6CDD1E31E0E459D41D /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553F073C7E5C42E95E294D /* APViewController.m */; };
+		B6553C7BFC7C958EB5942028 /* APRequiredValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65532338D23C1A1FAABED8D /* APRequiredValidatorTests.m */; };
 		B6553CA4FF57A977650ADCF2 /* APIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531FC491768F0C953417D /* APIndicatorView.m */; };
 		B6553CFEAE3C90B43336FE9D /* APCVVTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553CC52A34271BEEFF1154 /* APCVVTextField.m */; };
+		B6553D4AE3D8A2E9E26E5B8C /* APBlockValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553C9580574E5570EAA9CE /* APBlockValidatorTests.m */; };
+		B6553D9222228ED18F246DA2 /* APEmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553A3ABEC2D5322C31DDF4 /* APEmailValidatorTests.m */; };
 		B6553E312870D8AF3A4D3BC2 /* APZipValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65536404B19F0DA0CF93613 /* APZipValidatorTests.m */; };
 		B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B65530AE48524DF93BDDD72A /* APRequiredValidator.m */; };
 		B6553ED1D41D5F13D45D1E2C /* APCountryRegexProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553084F937A06C173C51EC /* APCountryRegexProvider.m */; };
@@ -97,18 +105,20 @@
 		716CBD571C970FAF00C02C33 /* APValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APValidator.m; sourceTree = "<group>"; };
 		716CBD591C970FAF00C02C33 /* UITextField+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+APValidators.h"; sourceTree = "<group>"; };
 		716CBD5A1C970FAF00C02C33 /* UITextField+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+APValidators.m"; sourceTree = "<group>"; };
-		716CBD641C99703400C02C33 /* APEqualValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEqualValidator.h; sourceTree = "<group>"; };
-		716CBD651C99703400C02C33 /* APEqualValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEqualValidator.m; sourceTree = "<group>"; };
+		716CBD641C99703400C02C33 /* APEqualStringValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEqualStringValidator.h; sourceTree = "<group>"; };
+		716CBD651C99703400C02C33 /* APEqualStringValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEqualStringValidator.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B6553051497E2C5E98D4EF99 /* APValidator+SubclassesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APValidator+SubclassesOnly.h"; sourceTree = "<group>"; };
 		B6553084F937A06C173C51EC /* APCountryRegexProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryRegexProvider.m; sourceTree = "<group>"; };
 		B65530A2E002C675EF73D6FA /* APStringValidatorTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APStringValidatorTestCase.h; sourceTree = "<group>"; };
 		B65530AE48524DF93BDDD72A /* APRequiredValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRequiredValidator.m; sourceTree = "<group>"; };
+		B65530B6B34785C286999A63 /* APCharactersCountValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCharactersCountValidatorTests.m; sourceTree = "<group>"; };
 		B65530FECCE3AA2DF5BC18B4 /* APViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APViewController+Alerts.h"; sourceTree = "<group>"; };
 		B6553139721B7B9F9A0D3481 /* APCountryRegexProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCountryRegexProviderTests.m; sourceTree = "<group>"; };
 		B655316B292FBABDEF813059 /* APBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBlockValidator.m; sourceTree = "<group>"; };
 		B65531D54DA0976AD8408C27 /* APKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APKeyboardController.h; sourceTree = "<group>"; };
 		B65531FC491768F0C953417D /* APIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIndicatorView.m; sourceTree = "<group>"; };
+		B65532338D23C1A1FAABED8D /* APRequiredValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRequiredValidatorTests.m; sourceTree = "<group>"; };
 		B655328725641B60EEB6FBAE /* APViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
 		B655338CEA9147E9B765F182 /* NSPredicate+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPredicate+APValidators.m"; sourceTree = "<group>"; };
 		B65533CCF2A0951E5D3CA153 /* APCreditCardValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreditCardValidatorTests.m; sourceTree = "<group>"; };
@@ -122,13 +132,19 @@
 		B65536404B19F0DA0CF93613 /* APZipValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APZipValidatorTests.m; sourceTree = "<group>"; };
 		B65536688DBA4CBE51B70E8E /* APZipValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APZipValidator.h; sourceTree = "<group>"; };
 		B65537346CFB72499D9D2872 /* APCardExpiresTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCardExpiresTextField.h; sourceTree = "<group>"; };
+		B65537501B942649A38950F0 /* APValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APValidatorTests.m; sourceTree = "<group>"; };
 		B6553817455B8348BBE15914 /* APCVVTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCVVTextField.h; sourceTree = "<group>"; };
+		B65538688F9BFE60244A59C0 /* APRegexValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRegexValidatorTests.m; sourceTree = "<group>"; };
+		B655399C81871529BD9FB901 /* APCompoundValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCompoundValidatorTests.m; sourceTree = "<group>"; };
+		B6553A3ABEC2D5322C31DDF4 /* APEmailValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEmailValidatorTests.m; sourceTree = "<group>"; };
 		B6553B2E185C248D5B860336 /* APRequiredValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRequiredValidator.h; sourceTree = "<group>"; };
 		B6553C17E26966AC5CAE1112 /* UITextView+APValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+APValidators.m"; sourceTree = "<group>"; };
 		B6553C2EAD833891B710E460 /* APStringValidatorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APStringValidatorTestCase.m; sourceTree = "<group>"; };
 		B6553C46BA355AF730BE9D6D /* APValidator+SubclassesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "APValidator+SubclassesOnly.m"; sourceTree = "<group>"; };
+		B6553C9580574E5570EAA9CE /* APBlockValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBlockValidatorTests.m; sourceTree = "<group>"; };
 		B6553CC52A34271BEEFF1154 /* APCVVTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCVVTextField.m; sourceTree = "<group>"; };
 		B6553D53F5651A9A58FD0F0B /* APCountryRegexProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCountryRegexProvider.h; sourceTree = "<group>"; };
+		B6553E31064586C50D75B165 /* APEqualValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEqualValidatorTests.m; sourceTree = "<group>"; };
 		B6553ECDF9ACD6CD4225D379 /* UITextView+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+APValidators.h"; sourceTree = "<group>"; };
 		B6553F018ECE740121A124B4 /* NSPredicate+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicate+APValidators.h"; sourceTree = "<group>"; };
 		B6553F073C7E5C42E95E294D /* APViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
@@ -234,6 +250,14 @@
 				B65533CCF2A0951E5D3CA153 /* APCreditCardValidatorTests.m */,
 				B6553C2EAD833891B710E460 /* APStringValidatorTestCase.m */,
 				B65530A2E002C675EF73D6FA /* APStringValidatorTestCase.h */,
+				B6553C9580574E5570EAA9CE /* APBlockValidatorTests.m */,
+				B65530B6B34785C286999A63 /* APCharactersCountValidatorTests.m */,
+				B6553A3ABEC2D5322C31DDF4 /* APEmailValidatorTests.m */,
+				B65538688F9BFE60244A59C0 /* APRegexValidatorTests.m */,
+				B65532338D23C1A1FAABED8D /* APRequiredValidatorTests.m */,
+				B655399C81871529BD9FB901 /* APCompoundValidatorTests.m */,
+				B65537501B942649A38950F0 /* APValidatorTests.m */,
+				B6553E31064586C50D75B165 /* APEqualValidatorTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -287,8 +311,8 @@
 		716CBD491C970FAF00C02C33 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				716CBD641C99703400C02C33 /* APEqualValidator.h */,
-				716CBD651C99703400C02C33 /* APEqualValidator.m */,
+				716CBD641C99703400C02C33 /* APEqualStringValidator.h */,
+				716CBD651C99703400C02C33 /* APEqualStringValidator.m */,
 				716CBD4A1C970FAF00C02C33 /* APCharactersCountValidator.h */,
 				716CBD4B1C970FAF00C02C33 /* APCharactersCountValidator.m */,
 				716CBD4E1C970FAF00C02C33 /* APCompoundValidator.h */,
@@ -570,7 +594,7 @@
 				716CBD631C970FAF00C02C33 /* UITextField+APValidators.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				716CBD5C1C970FAF00C02C33 /* APCharactersCountValidator.m in Sources */,
-				716CBD661C99703400C02C33 /* APEqualValidator.m in Sources */,
+				716CBD661C99703400C02C33 /* APEqualStringValidator.m in Sources */,
 				B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */,
 				B65537C056E0C164E1926A77 /* UITextView+APValidators.m in Sources */,
 				B655368CB1EF87DD5EEAFCE2 /* APCompoundValidator.m in Sources */,
@@ -598,6 +622,14 @@
 				B6553E312870D8AF3A4D3BC2 /* APZipValidatorTests.m in Sources */,
 				B655312A8048620D322D0BB2 /* APCreditCardValidatorTests.m in Sources */,
 				B65539FD2267326E8BF37F8D /* APStringValidatorTestCase.m in Sources */,
+				B6553D4AE3D8A2E9E26E5B8C /* APBlockValidatorTests.m in Sources */,
+				B65539F60D47CF2E079EF1DB /* APCharactersCountValidatorTests.m in Sources */,
+				B6553D9222228ED18F246DA2 /* APEmailValidatorTests.m in Sources */,
+				B65533C11DD3C535B3EFCDBD /* APRegexValidatorTests.m in Sources */,
+				B6553C7BFC7C958EB5942028 /* APRequiredValidatorTests.m in Sources */,
+				B6553163696DA033BFC70601 /* APCompoundValidatorTests.m in Sources */,
+				B65534D3C3C918CFB38158FF /* APValidatorTests.m in Sources */,
+				B65538E08B96ED3D3F42C0B0 /* APEqualValidatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

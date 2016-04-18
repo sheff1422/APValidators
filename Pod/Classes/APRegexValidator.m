@@ -5,6 +5,7 @@
 
 #import "APRegexValidator.h"
 #import "APValidator+SubclassesOnly.h"
+#import "NSPredicate+APValidators.h"
 
 
 
@@ -17,7 +18,7 @@
         [NSException raise:NSInvalidArgumentException format:@"Regex validator should have regex before validation!"];
     }
 
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regex];
+    NSPredicate *predicate = [NSPredicate predicateWithRegex:self.regex];
     self.valid = [predicate evaluateWithObject:self.validationObject];
 }
 

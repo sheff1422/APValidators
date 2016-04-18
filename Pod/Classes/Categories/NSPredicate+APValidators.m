@@ -10,6 +10,11 @@
 @implementation NSPredicate (APValidators)
 
 
++ (NSPredicate *)predicateWithRegex:(NSString *)regex
+{
+    return [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+}
+
 + (NSPredicate *)predicateForCreditCardType:(APCreditCardType)creditCardType
 {
     if (creditCardType == APCreditCardTypeInvalid || creditCardType == APCreditCardTypeUnsupported) {

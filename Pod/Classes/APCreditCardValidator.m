@@ -29,14 +29,10 @@
         validationString = self.validationObject;
     }
 
-    if (validationString.length < 9) {
-        return APCreditCardTypeInvalid;
-    }
-
     APCreditCardType type = APCreditCardTypeUnsupported;
     for (int i = 0; i < APCreditCardTypeUnsupported; ++ i) {
         NSPredicate *predicate = [NSPredicate predicateForCreditCardType:(APCreditCardType) i];
-        BOOL result = [predicate evaluateWithObject:self.validationObject];
+        BOOL result = [predicate evaluateWithObject:validationString];
         if (result) {
             type = (APCreditCardType) i;
             break;

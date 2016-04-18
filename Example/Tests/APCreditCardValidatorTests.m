@@ -13,6 +13,8 @@
 
 @interface APCreditCardValidatorTests : APStringValidatorTestCase
 
+
+@property(nonatomic, strong) APCreditCardValidator *creditCardValidator;
 @end
 
 
@@ -25,6 +27,7 @@
     [super setUp];
 
     self.validator = [APCreditCardValidator new];
+    self.creditCardValidator = (APCreditCardValidator *) self.validator;
 }
 
 #pragma mark - Tests
@@ -32,118 +35,127 @@
 - (void)testEmptyValidationObject
 {
     // given
-    self.validator.validationObject = nil;
+    self.creditCardValidator.validationObject = nil;
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beFalsy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeInvalid);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beFalsy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeInvalid);
 }
 
 - (void)testValidationObjectIsShorterThanNine
 {
     // given
-    self.validator.validationObject = @"12345678";
+    self.creditCardValidator.validationObject = @"12345678";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beFalsy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeInvalid);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beFalsy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeInvalid);
 }
 
 - (void)testVISA
 {
     // given
-    self.validator.validationObject = @"4012888888881881";
+    self.creditCardValidator.validationObject = @"4012888888881881";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeVisa);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeVisa);
 }
 
 - (void)testVISA_Short
 {
     // given
-    self.validator.validationObject = @"4222222222222";
+    self.creditCardValidator.validationObject = @"4222222222222";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
     // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeVisa);
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeVisa);
 }
 
 - (void)testMasterCard
 {
     // given
-    self.validator.validationObject = @"5555555555554444";
+    self.creditCardValidator.validationObject = @"5555555555554444";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeMastercard);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeMastercard);
 }
 
 - (void)testAMEX
 {
     // given
-    self.validator.validationObject = @"378282246310005";
+    self.creditCardValidator.validationObject = @"378282246310005";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeAmex);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeAmex);
 }
 
 - (void)testDiscover
 {
     // given
-    self.validator.validationObject = @"6011111111111117";
+    self.creditCardValidator.validationObject = @"6011111111111117";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeDiscover);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeDiscover);
 }
 
 - (void)testDinersClub
 {
     // given
-    self.validator.validationObject = @"30569309025904";
+    self.creditCardValidator.validationObject = @"30569309025904";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeDinersClub);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeDinersClub);
 }
 
 - (void)testJCB
 {
     // given
-    self.validator.validationObject = @"3566002020360505";
+    self.creditCardValidator.validationObject = @"3566002020360505";
 
     // call
-    [self.validator validate];
+    [self.creditCardValidator validate];
 
-    // verifications
-    expect(self.validator.isValid).to.beTruthy();
-    expect(((APCreditCardValidator *)self.validator).creditCardType).to.equal(APCreditCardTypeJCB);
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeJCB);
+}
+
+- (void)testCreditCardTypeThrowsExceptionIfValidatonObjectIsNotNSString
+{
+    self.creditCardValidator.validationObject = @1488;
+
+    expect(^{
+        self.creditCardValidator.creditCardType;
+    }).to.raiseAny();
 }
 
 @end

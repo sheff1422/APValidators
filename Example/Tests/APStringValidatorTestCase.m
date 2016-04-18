@@ -13,6 +13,15 @@
 
 @implementation APStringValidatorTestCase
 
+
+- (void)setUp
+{
+    [super setUp];
+
+    self.validator = [APStringValidator new];
+}
+
+
 - (void)testThrowsExceptionIfValidationObjectIsNotNSString
 {
     self.validator.validationObject = @1488;

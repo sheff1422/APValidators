@@ -10,7 +10,7 @@
 
 @interface NSPredicate (APValidators)
 
-
++ (NSPredicate *)predicateWithRegex:(NSString *)regex;
 + (NSPredicate *)predicateForCreditCardType:(APCreditCardType)creditCardType;
 
 @end

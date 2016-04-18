@@ -11,12 +11,19 @@
 
 @implementation UITextField (APValidators)
 
+
 #pragma mark - Lifecycle
 
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self removeObserver:self forKeyPath:@"text"];
+
+    @try {
+        [self removeObserver:self forKeyPath:@"text"];
+    }
+    @catch (id anException) {
+        // do nothing
+    }
 }
 
 #pragma mark - Accessors

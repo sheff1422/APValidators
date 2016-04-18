@@ -4,11 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APValidator.h"
+#import "APStringValidator.h"
 
 
 
-@interface APEqualValidator : APValidator
+@interface APEqualStringValidator : APStringValidator
 
 
 @property(nonatomic, weak) IBOutlet id secondControl;

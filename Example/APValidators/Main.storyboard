@@ -320,7 +320,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Confirm Email is required"/>
                     </userDefinedRuntimeAttributes>
                 </customObject>
-                <customObject id="2El-bd-G3N" userLabel="Confirm Email Equal Validator" customClass="APEqualValidator">
+                <customObject id="2El-bd-G3N" userLabel="Confirm Email Equal Validator" customClass="APEqualStringValidator">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Emails must be equal"/>
                     </userDefinedRuntimeAttributes>

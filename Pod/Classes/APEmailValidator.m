@@ -5,25 +5,21 @@
 
 #import "APEmailValidator.h"
 #import "APValidator+SubclassesOnly.h"
-#import "APRegexValidator.h"
-
-static NSString *const APEmailValidatorRegex = @"^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,4})$";
+#import "NSPredicate+APValidators.h"
 
 
 
 @implementation APEmailValidator
 
 
+NSString *const APEmailValidatorRegex = @"^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,4})$";
+
 - (void)validate
 {
     [super validate];
 
-    APRegexValidator *regexValidator = [APRegexValidator new];
-    regexValidator.regex = APEmailValidatorRegex;
-    regexValidator.validationObject = self.validationObject;
-    [regexValidator validate];
-
-    self.valid = regexValidator.isValid;
+    NSPredicate *predicate = [NSPredicate predicateWithRegex:APEmailValidatorRegex];
+    self.valid = [predicate evaluateWithObject:self.validationObject];
 }
 
 @end
