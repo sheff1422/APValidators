@@ -4,6 +4,7 @@
 //
 
 #import "APEqualValidator.h"
+#import "APValidator+SubclassesOnly.h"
 
 
 

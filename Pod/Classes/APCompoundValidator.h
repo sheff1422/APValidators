@@ -20,9 +20,9 @@
 
 
 
-@interface APCompoundValidator (SubclassesOnly)
-
-
-- (void)checkAllValidatorsAndUpdateState;
-
-@end
+//@interface APCompoundValidator (SubclassesOnly)
+//
+//
+//- (void)checkAllValidatorsAndUpdateState;
+//
+//@end

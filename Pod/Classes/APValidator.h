@@ -62,11 +62,3 @@ extern NSString *const APValidatorStateChangedNotification;
 - (void)validate;
 
 @end
-
-
-// TODO move this
-@interface APValidator (SubclassesOnly)
-
-
-@property(nonatomic, assign, getter=isValid, readwrite) BOOL valid;
-@end

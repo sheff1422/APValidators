@@ -4,11 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APValidator.h"
+#import "APStringValidator.h"
 
 
 
-@interface APCharactersCountValidator : APValidator
+@interface APCharactersCountValidator : APStringValidator
 
 
 @property(nonatomic, assign) IBInspectable NSUInteger minCount;

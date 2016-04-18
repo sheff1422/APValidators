@@ -5,8 +5,9 @@
 
 #import <Foundation/Foundation.h>
 #import "APCharactersCountValidator.h"
+#import "APStringValidator.h"
 
 
 
-@interface APRequiredValidator : APValidator
+@interface APRequiredValidator : APStringValidator
 @end

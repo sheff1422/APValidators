@@ -16,6 +16,7 @@
 
 
 @property(strong, nonatomic) IBOutlet APCompoundValidator *formValidator;
+
 @end
 
 

@@ -4,6 +4,7 @@
 //
 
 #import "APCharactersCountValidator.h"
+#import "APValidator+SubclassesOnly.h"
 
 
 
@@ -28,11 +29,7 @@
 
 - (void)validate
 {
-    if (! [self.validationObject isKindOfClass:[NSString class]]) {
-        [NSException raise:NSInternalInconsistencyException
-                    format:@"%@ validationObject should be NSString!",
-                           NSStringFromClass([self class])];
-    }
+    [super validate];
 
     NSString *validationObject = self.validationObject;
     NSUInteger length = validationObject.length;

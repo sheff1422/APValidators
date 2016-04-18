@@ -4,37 +4,63 @@
 //
 
 #import "APCreditCardValidator.h"
+#import "APValidator+SubclassesOnly.h"
+#import "NSPredicate+APValidators.h"
 
 
 
 @implementation APCreditCardValidator
 
 
-- (void)validate
+- (APCreditCardType)creditCardType
 {
-    [super validate];
+    if (! self.validationObject || ! self.isValid) {
+        return APCreditCardTypeInvalid;
+    }
+
+    NSString *validationString = nil;
 
     if (! [self.validationObject isKindOfClass:[NSString class]]) {
         [NSException raise:NSInternalInconsistencyException
                     format:@"%@ validationObject should be NSString!",
                            NSStringFromClass([self class])];
     }
+    else {
+        validationString = self.validationObject;
+    }
+
+    if (validationString.length < 9) {
+        return APCreditCardTypeInvalid;
+    }
+
+    APCreditCardType type = APCreditCardTypeUnsupported;
+    for (int i = 0; i < APCreditCardTypeUnsupported; ++ i) {
+        NSPredicate *predicate = [NSPredicate predicateForCreditCardType:(APCreditCardType) i];
+        BOOL result = [predicate evaluateWithObject:self.validationObject];
+        if (result) {
+            type = (APCreditCardType) i;
+            break;
+        }
+    }
+
+    return type;
+}
+
+
+- (void)validate
+{
+    [super validate];
 
     NSString *validationString = self.validationObject;
 
-    NSCharacterSet *illegalCharacters = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-
-    NSArray *components = [validationString componentsSeparatedByCharactersInSet:illegalCharacters];
-    NSString *formattedString = [components componentsJoinedByString:@""];
-
-    if (formattedString == nil || formattedString.length < 9) {
+    if (! validationString || validationString.length < 9) {
         self.valid = NO;
         return;
     }
 
-    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[formattedString length]];
+    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[validationString length]];
 
-    [formattedString enumerateSubstringsInRange:NSMakeRange(0, [formattedString length])
+    [validationString enumerateSubstringsInRange:NSMakeRange(0, [validationString length])
                                         options:(NSStringEnumerationReverse | NSStringEnumerationByComposedCharacterSequences)
                                      usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
                                          [reversedString appendString:substring];

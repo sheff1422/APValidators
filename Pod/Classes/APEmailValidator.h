@@ -4,13 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APRegexValidator.h"
+#import "APStringValidator.h"
 
 
 
-@interface APEmailValidator : APValidator
-
-
+@interface APEmailValidator : APStringValidator
 
 
 @end

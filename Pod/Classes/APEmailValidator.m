@@ -4,8 +4,11 @@
 //
 
 #import "APEmailValidator.h"
+#import "APValidator+SubclassesOnly.h"
+#import "APRegexValidator.h"
 
 static NSString *const APEmailValidatorRegex = @"^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,4})$";
+
 
 
 @implementation APEmailValidator

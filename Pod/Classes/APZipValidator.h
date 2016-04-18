@@ -5,10 +5,11 @@
 
 #import <Foundation/Foundation.h>
 #import "APValidator.h"
+#import "APStringValidator.h"
 
 
 
-@interface APZipValidator : APValidator
+@interface APZipValidator : APStringValidator
 
 
 @property(nonatomic, copy) IBInspectable NSString *countryCode;

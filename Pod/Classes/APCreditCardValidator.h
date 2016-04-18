@@ -4,13 +4,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APValidator.h"
-#import "APCharactersCountValidator.h"
+#import "APStringValidator.h"
 
 
+typedef NS_ENUM(NSInteger, APCreditCardType) {
+    APCreditCardTypeAmex,
+    APCreditCardTypeVisa,
+    APCreditCardTypeMastercard,
+    APCreditCardTypeDiscover,
+    APCreditCardTypeDinersClub,
+    APCreditCardTypeJCB,
+    APCreditCardTypeUnsupported,
+    APCreditCardTypeInvalid
+};
 
-@interface APCreditCardValidator : APValidator
+@interface APCreditCardValidator : APStringValidator
 
 
+@property(nonatomic, assign, readonly) APCreditCardType creditCardType;
 
 @end

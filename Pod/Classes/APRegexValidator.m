@@ -4,6 +4,7 @@
 //
 
 #import "APRegexValidator.h"
+#import "APValidator+SubclassesOnly.h"
 
 
 

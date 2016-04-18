@@ -4,6 +4,8 @@
 //
 
 #import "APRequiredValidator.h"
+#import "APValidator+SubclassesOnly.h"
+
 
 
 @implementation APRequiredValidator
