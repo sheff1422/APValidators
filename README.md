@@ -1,6 +1,7 @@
 # APValidators
 
 [![Build Status](https://www.bitrise.io/app/c310b69440b5dc74.svg?token=MYgb5mr11INehfMT5USCTg&branch=master)](https://www.bitrise.io/app/c310b69440b5dc74)
+[![Coverage Status](https://coveralls.io/repos/github/Alterplay/APValidators/badge.svg?branch=master)](https://coveralls.io/github/Alterplay/APValidators?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
 [![License](https://img.shields.io/cocoapods/l/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
 [![Platform](https://img.shields.io/cocoapods/p/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
