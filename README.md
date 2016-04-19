@@ -3,6 +3,7 @@
 ![APValidators](/images/apvalidators_cover.png)
 
 [![Build Status](https://www.bitrise.io/app/c310b69440b5dc74.svg?token=MYgb5mr11INehfMT5USCTg&branch=master)](https://www.bitrise.io/app/c310b69440b5dc74)
+[![codecov.io](https://codecov.io/github/Alterplay/APValidators/coverage.svg?branch=master)](https://codecov.io/github/Alterplay/APValidators?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
 [![License](https://img.shields.io/cocoapods/l/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
 [![Platform](https://img.shields.io/cocoapods/p/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
