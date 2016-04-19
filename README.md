@@ -25,14 +25,14 @@ APValidators is a codeless solution for form validation. Just connect everything
     ![Validators](/images/validators.png)
 3. Assign custom class for every validator. 
 
-* `APRegexValidator` - validates over regex expression.
-* `APRequiredValidator` - validates that string is not empty.
-* `APZipValidator` - ZIP code validation. Must have two-letters country code assigned. Currently supports 151 countries.
-* `APEmailValidator` - email validation.
-* `APEqualValidator` - validates that two controls has equal text.
-* `APBlockValidator` - invokes custom block for validation.
-* `APCreditCardValidator` - validates credit card number by Luhn alghoritm. Also returns credit card type.
-* `APCharactersCountValidator` - validates lenght of string by min and max characters count. * `APCompoundValidator` - allows to connect child validators. Will have valid state only if every child validator has valid state. Also returns `errorMessages` array of all not valid child validators `errorMessage` properties at the moment. 
+    * `APRegexValidator` - validates over regex expression.
+    * `APRequiredValidator` - validates that string is not empty.
+    * `APZipValidator` - ZIP code validation. Must have two-letters country code assigned. Currently supports 151 countries.
+    * `APEmailValidator` - email validation.
+    * `APEqualValidator` - validates that two controls has equal text.
+    * `APBlockValidator` - invokes custom block for validation.
+    * `APCreditCardValidator` - validates credit card number by Luhn alghoritm. Also returns credit card type.
+    * `APCharactersCountValidator` - validates lenght of string by min and max characters count. * `APCompoundValidator` - allows to connect child validators. Will have valid state only if every child validator has valid state. Also returns `errorMessages` array of all not valid child validators `errorMessage` properties at the moment. 
 
     ![Assign subclass](/images/assign-class.png)
 4. Connect your UI-control `validator` property to validator Object. APValidators currently support only UITextField and UITextView subclasses. 
