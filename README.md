@@ -40,10 +40,10 @@ APValidators is a codeless solution for form validation. Just connect everything
 4. Connect your UI-control `validator` property to validator Object. APValidators currently support only UITextField and UITextView subclasses. 
 
     ![Connect validator](/images/connect-validator.png)
-5. Use APCompoundValidator if you need more than one validator for UI-control. Connect it to UI-control and all validators to it's `validators` property. 
+5. Use `APCompoundValidator` if you need more than one validator for UI-control. Connect it to UI-control and all validators to it's `validators` property. 
 
     ![Compound validator](/images/compound-validator.png)
-6. Use one APCompoundValidator as form validator and connect all other validators to it. 
+6. Use one `APCompoundValidator` as form validator and connect all other validators to it. 
 
     ![Form validator](/images/form-validator.png)
 
