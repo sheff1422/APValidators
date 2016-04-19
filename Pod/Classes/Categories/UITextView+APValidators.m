@@ -16,14 +16,7 @@
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-
-    @try {
-        [self removeObserver:self forKeyPath:@"text"];
-    }
-    @catch (id anException) {
-        // do nothing
-    }
+    [self ap_removeObserving];
 }
 
 #pragma mark - Accessors
@@ -39,6 +32,8 @@
 
     validator.control = self;
     validator.validationObject = self.text;
+
+    [self ap_removeObserving];
 
     [self addObserver:self
            forKeyPath:@"text"
@@ -71,6 +66,18 @@
 }
 
 #pragma mark - Private
+
+- (void)ap_removeObserving
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    @try {
+        [self removeObserver:self forKeyPath:@"text"];
+    }
+    @catch (id anException) {
+        // do nothing
+    }
+}
 
 - (void)ap_validate
 {
