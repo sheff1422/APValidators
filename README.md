@@ -1,6 +1,6 @@
 # APValidators
 
-<img src="https://github.com/Alterplay/APValidators/images/apvalidators_cover.png">
+![APValidators](/images/apvalidators_cover.png)
 
 [![Build Status](https://www.bitrise.io/app/c310b69440b5dc74.svg?token=MYgb5mr11INehfMT5USCTg&branch=master)](https://www.bitrise.io/app/c310b69440b5dc74)
 [![Version](https://img.shields.io/cocoapods/v/APValidators.svg?style=flat)](http://cocoapods.org/pods/APValidators)
@@ -21,6 +21,8 @@ APValidators is a codeless solution for form validation. Just connect everything
 
 1. Create your form UI in Interface Builder.
 2. In Interface builder add Object ![Object](/images//ib-object.png) to your UIViewController for every validator. 
+
+    ![Validators](/images/validators.png)
 3. Assign custom class for every validator. 
 
 * `APRegexValidator` - validates over regex expression.
