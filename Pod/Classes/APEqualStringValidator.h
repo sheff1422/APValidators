@@ -10,7 +10,9 @@
 
 @interface APEqualStringValidator : APStringValidator
 
-
+/**
+ *  Second control. Currently supports UITextField and UITextView. Will throw exception for another classes.
+ */
 @property(nonatomic, weak) IBOutlet id secondControl;
 
 @end

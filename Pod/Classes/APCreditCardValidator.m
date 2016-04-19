@@ -42,14 +42,13 @@
     return type;
 }
 
-
 - (void)validate
 {
     [super validate];
 
     NSString *validationString = self.validationObject;
 
-    if (! validationString || validationString.length < 9) {
+    if (! validationString || validationString.length < 9 || validationString.length > 19) {
         self.valid = NO;
         return;
     }

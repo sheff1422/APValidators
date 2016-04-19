@@ -9,5 +9,6 @@
 
 @implementation APValidator (SubclassesOnly)
 
+@dynamic valid;
 
 @end

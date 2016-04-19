@@ -47,7 +47,7 @@
 
 - (NSNotificationCenter *)notificationCenter
 {
-    return [NSNotificationCenter defaultCenter];;
+    return [NSNotificationCenter defaultCenter];
 }
 
 #pragma mark - Lifecycle

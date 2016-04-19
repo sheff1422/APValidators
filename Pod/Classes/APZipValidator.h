@@ -11,7 +11,9 @@
 
 @interface APZipValidator : APStringValidator
 
-
+/**
+ *  Country code from 2 chars.
+ */
 @property(nonatomic, copy) IBInspectable NSString *countryCode;
 
 @end

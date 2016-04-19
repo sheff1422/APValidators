@@ -10,6 +10,7 @@
 
 @implementation APCompoundValidator
 
+@dynamic errorMessage;
 
 #pragma mark - Lifecycle
 

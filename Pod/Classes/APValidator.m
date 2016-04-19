@@ -32,6 +32,11 @@ NSString *const APValidatorStateChangedNotification = @"APValidatorStateChangedN
 
 #pragma mark - Accessors
 
+- (void)setErrorMessage:(NSString *)errorMessage
+{
+    _errorMessage = NSLocalizedString([errorMessage copy], nil);
+}
+
 - (void)setValid:(BOOL)valid
 {
     if (_valid == valid) {

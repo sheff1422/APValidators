@@ -58,6 +58,19 @@
     expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeInvalid);
 }
 
+- (void)testValidationObjectIsLongerThanNineteen
+{
+    // given
+    self.creditCardValidator.validationObject = @"12345678909876543210";
+
+    // call
+    [self.creditCardValidator validate];
+
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beFalsy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeInvalid);
+}
+
 - (void)testVISA
 {
     // given
@@ -149,12 +162,38 @@
     expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeJCB);
 }
 
+- (void)testMaestro_19Digits
+{
+    // given
+    self.creditCardValidator.validationObject = @"676123070691347787";
+
+    // call
+    [self.creditCardValidator validate];
+
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeUnsupported);
+}
+
+- (void)testLaser_19Digits
+{
+    // given
+    self.creditCardValidator.validationObject = @"6304219447607087665";
+
+    // call
+    [self.creditCardValidator validate];
+
+    // expectations
+    expect(self.creditCardValidator.isValid).to.beTruthy();
+    expect(self.creditCardValidator.creditCardType).to.equal(APCreditCardTypeUnsupported);
+}
+
 - (void)testCreditCardTypeThrowsExceptionIfValidatonObjectIsNotNSString
 {
     self.creditCardValidator.validationObject = @1488;
 
     expect(^{
-        self.creditCardValidator.creditCardType;
+        [self.creditCardValidator creditCardType];
     }).to.raiseAny();
 }
 

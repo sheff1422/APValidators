@@ -38,11 +38,13 @@
     NSString *currentText = self.text;
     NSUInteger currentTextLength = [currentText length];
 
-    if (currentTextLength == 2 && ! self.hasDivider) {
-        self.text = [NSString stringWithFormat:@"%@/", currentText];
+    if (currentTextLength == 3 && ! self.hasDivider) {
+        NSString *firstTwo = [currentText substringToIndex:2];
+        NSString *lastOne = [currentText substringFromIndex:2];
+        self.text = [NSString stringWithFormat:@"%@/%@", firstTwo, lastOne];
         self.hasDivider = YES;
     }
-    else if (currentTextLength == 2 && self.hasDivider) {
+    else if (currentTextLength == 3 && self.hasDivider) {
         self.text = [currentText substringToIndex:2];
         self.hasDivider = NO;
     }

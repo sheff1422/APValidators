@@ -10,8 +10,14 @@
 
 @interface APCharactersCountValidator : APStringValidator
 
-
+/**
+ *  Minimum characters count in validationObject
+ */
 @property(nonatomic, assign) IBInspectable NSUInteger minCount;
+
+/**
+ *  Maximum characters count in validationObject
+ */
 @property(nonatomic, assign) IBInspectable NSUInteger maxCount;
 
 @end

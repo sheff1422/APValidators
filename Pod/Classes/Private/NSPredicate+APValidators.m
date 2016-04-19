@@ -17,10 +17,6 @@
 
 + (NSPredicate *)predicateForCreditCardType:(APCreditCardType)creditCardType
 {
-    if (creditCardType == APCreditCardTypeInvalid || creditCardType == APCreditCardTypeUnsupported) {
-        return nil;
-    }
-
     NSString *regex = nil;
     switch (creditCardType) {
         case APCreditCardTypeAmex:
@@ -41,8 +37,10 @@
         case APCreditCardTypeJCB:
             regex = @"^(?:2131|1800|35[0-9]{3})[0-9]{3,}$";
             break;
+        case APCreditCardTypeUnsupported:
+        case APCreditCardTypeInvalid:
         default:
-            break;
+            return nil;
     }
 
     return [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];

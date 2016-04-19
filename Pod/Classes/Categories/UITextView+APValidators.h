@@ -11,6 +11,9 @@
 
 @interface UITextView (APValidators)
 
+/**
+ *  Validator object currently attached to this text view.
+ */
 @property(nonatomic, strong) IBOutlet APValidator *validator;
 
 @end

@@ -8,6 +8,12 @@
 @class APValidator;
 
 typedef void (^APValidatorStateChangeHandler)(APValidator *validator);
+
+
+/**
+ * Notification
+ * Will be send on every state change
+ */
 extern NSString *const APValidatorStateChangedNotification;
 
 
@@ -16,7 +22,15 @@ extern NSString *const APValidatorStateChangedNotification;
 
 
 @optional
+
+/**
+ *  Invoked just before state change
+ */
 - (void)validatorWillChangeState:(APValidator *)validator;
+
+/**
+ * Invoked right after state change
+ */
 - (void)validatorDidChangeState:(APValidator *)validator;
 
 @end
@@ -28,16 +42,17 @@ extern NSString *const APValidatorStateChangedNotification;
 
 /**
  *  Back link to control
+ *  Currently supports only UITextField and UITextView
  */
 @property(nonatomic, weak) id control;
 
 /**
- *  Object to validate
+ *  Object for validation
  */
 @property(nonatomic, strong) id validationObject;
 
 /**
- *  Stores error message for invalid state
+ *  Error message for invalid state, wrapped in LocalizedString under the hood
  */
 @property(nonatomic, copy) IBInspectable NSString *errorMessage;
 
@@ -47,7 +62,7 @@ extern NSString *const APValidatorStateChangedNotification;
 @property(nonatomic, weak) IBOutlet id <APDataValidatorDelegate> delegate;
 
 /**
- *  If set, the block runs when validation state changes
+ * Block that will be invoked on every state change
  */
 @property(copy, nonatomic) APValidatorStateChangeHandler validatorStateChangedHandler;
 
@@ -57,7 +72,7 @@ extern NSString *const APValidatorStateChangedNotification;
 @property(nonatomic, assign, getter=isValid, readonly) BOOL valid;
 
 /**
- *  Called to validate current validation object
+ *  Will validate current validation object and call all notifications
  */
 - (void)validate;
 

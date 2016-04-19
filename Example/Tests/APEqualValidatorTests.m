@@ -36,8 +36,9 @@
 
 - (void)testThrowsExceptionIfSecondControlIsNotSupported
 {
+    UIButton *button = [UIButton new];
     expect(^{
-        self.equalStringValidator.secondControl = [UIButton new];
+        self.equalStringValidator.secondControl = button;
     }).to.raiseAny();
 }
 

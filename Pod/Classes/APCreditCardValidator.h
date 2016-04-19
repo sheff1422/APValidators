@@ -20,7 +20,9 @@ typedef NS_ENUM(NSInteger, APCreditCardType) {
 
 @interface APCreditCardValidator : APStringValidator
 
-
+/**
+ *  Returns card type for current validationObject
+ */
 @property(nonatomic, assign, readonly) APCreditCardType creditCardType;
 
 @end

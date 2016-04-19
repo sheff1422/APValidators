@@ -11,6 +11,9 @@
 
 @interface UITextField (APValidators)
 
+/**
+ *  Validator object currently attached to this text field.
+ */
 @property(nonatomic, strong) IBOutlet APValidator *validator;
 
 @end

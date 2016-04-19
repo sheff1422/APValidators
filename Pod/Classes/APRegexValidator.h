@@ -10,7 +10,9 @@
 
 @interface APRegexValidator : APValidator
 
-
+/**
+ *  Simply regex string for validation of validationObject.
+ */
 @property(nonatomic, copy) IBInspectable NSString *regex;
 
 

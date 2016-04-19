@@ -10,7 +10,9 @@
 
 @interface APBlockValidator : APValidator
 
-
+/**
+ *  Block will be invoked in validate method. Must return validation result.
+ */
 @property(nonatomic, copy) BOOL (^validationBlock)(id validationObject);
 
 @end

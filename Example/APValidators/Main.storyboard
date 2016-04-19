@@ -178,12 +178,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5jM-cs-le4" userLabel="Additional Info Text View">
-                                        <rect key="frame" x="20" y="378" width="280" height="116"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bI-pW-Km5">
                                         <rect key="frame" x="20" y="514" width="280" height="34"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,6 +212,34 @@
                                             <outlet property="validator" destination="7Bk-gI-9hE" id="uWE-SE-dKh"/>
                                         </connections>
                                     </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5jM-cs-le4" userLabel="Additional Info Text View">
+                                        <rect key="frame" x="20" y="378" width="280" height="116"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="validator" destination="Qvn-cm-qOV" id="OiI-32-u15"/>
+                                        </connections>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0P-z5-883" userLabel="Indicator Container View">
+                                        <rect key="frame" x="300" y="421" width="20" height="30"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-Oa-xt9" userLabel="Indicator View" customClass="APIndicatorView">
+                                                <rect key="frame" x="9" y="14" width="3" height="3"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="3" id="BsA-PZ-Lmg"/>
+                                                    <constraint firstAttribute="height" constant="3" id="ZgF-5S-zBX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IBe-ty-9Hh"/>
+                                            <constraint firstItem="fB5-Oa-xt9" firstAttribute="centerY" secondItem="F0P-z5-883" secondAttribute="centerY" id="QqU-VW-ouV"/>
+                                            <constraint firstAttribute="width" constant="20" id="d7W-tk-eEP"/>
+                                            <constraint firstItem="fB5-Oa-xt9" firstAttribute="centerX" secondItem="F0P-z5-883" secondAttribute="centerX" id="zyM-o2-lXW"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -236,6 +258,7 @@
                                     <constraint firstAttribute="trailing" secondItem="VJI-kf-2nH" secondAttribute="trailing" id="CaF-Mj-UoG"/>
                                     <constraint firstItem="Y0J-lS-pbL" firstAttribute="trailing" secondItem="1Vg-uv-u11" secondAttribute="trailing" id="Di5-nu-E2E"/>
                                     <constraint firstItem="5jM-cs-le4" firstAttribute="trailing" secondItem="eak-dC-nyN" secondAttribute="trailing" id="KDM-Qb-8qa"/>
+                                    <constraint firstItem="F0P-z5-883" firstAttribute="leading" secondItem="5jM-cs-le4" secondAttribute="trailing" id="Kg7-Hn-qN0"/>
                                     <constraint firstItem="kYl-Pi-2jB" firstAttribute="leading" secondItem="Y0J-lS-pbL" secondAttribute="trailing" id="Kvj-lP-DeR"/>
                                     <constraint firstItem="9LD-WC-ydU" firstAttribute="leading" secondItem="ADN-VB-LrW" secondAttribute="leading" id="NHp-Gd-UJR"/>
                                     <constraint firstAttribute="trailing" secondItem="kYl-Pi-2jB" secondAttribute="trailing" id="NSo-YG-9cU"/>
@@ -247,6 +270,7 @@
                                     <constraint firstItem="gbD-Qr-qlt" firstAttribute="bottom" secondItem="9LD-WC-ydU" secondAttribute="bottom" id="X14-av-Rco"/>
                                     <constraint firstItem="VJI-kf-2nH" firstAttribute="leading" secondItem="ADN-VB-LrW" secondAttribute="trailing" id="XkW-NF-CpQ"/>
                                     <constraint firstItem="4bI-pW-Km5" firstAttribute="top" secondItem="5jM-cs-le4" secondAttribute="bottom" constant="20" id="Xku-Tf-9Il"/>
+                                    <constraint firstAttribute="trailing" secondItem="F0P-z5-883" secondAttribute="trailing" id="Xm2-hj-edZ"/>
                                     <constraint firstItem="cxt-DK-EI4" firstAttribute="width" secondItem="eak-dC-nyN" secondAttribute="width" multiplier="0.45" id="Xvj-xP-1UV"/>
                                     <constraint firstItem="kYl-Pi-2jB" firstAttribute="top" secondItem="Y0J-lS-pbL" secondAttribute="top" id="azL-b1-OnF"/>
                                     <constraint firstAttribute="trailing" secondItem="BG4-Pa-t0p" secondAttribute="trailing" id="bpP-AR-EvM"/>
@@ -280,6 +304,7 @@
                                     <constraint firstItem="eak-dC-nyN" firstAttribute="trailing" secondItem="9LD-WC-ydU" secondAttribute="trailing" id="unG-W3-Osl"/>
                                     <constraint firstItem="FRT-n4-tsl" firstAttribute="bottom" secondItem="eak-dC-nyN" secondAttribute="bottom" id="vUi-cT-CMs"/>
                                     <constraint firstItem="FRT-n4-tsl" firstAttribute="top" secondItem="eak-dC-nyN" secondAttribute="top" id="xMv-5z-Ac2"/>
+                                    <constraint firstItem="F0P-z5-883" firstAttribute="centerY" secondItem="5jM-cs-le4" secondAttribute="centerY" id="ysk-bI-JGP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -406,6 +431,14 @@
                         <outlet property="delegate" destination="xEr-ZL-vfz" id="mEU-9t-2Sz"/>
                     </connections>
                 </customObject>
+                <customObject id="Qvn-cm-qOV" userLabel="Required Text View Validator" customClass="APRequiredValidator">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="You must write some text in Additional Info"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="fB5-Oa-xt9" id="k3N-Hd-hsd"/>
+                    </connections>
+                </customObject>
                 <customObject id="bpR-0b-Cb1" userLabel="Form Validator" customClass="APCompoundValidator">
                     <connections>
                         <outletCollection property="validators" destination="X2S-cg-Equ" id="CrM-su-pA1"/>
@@ -415,6 +448,7 @@
                         <outletCollection property="validators" destination="qYc-HZ-iSR" id="ihC-vd-U4B"/>
                         <outletCollection property="validators" destination="B2c-w9-EbG" id="nm8-d9-6c7"/>
                         <outletCollection property="validators" destination="7Bk-gI-9hE" id="zhT-yp-ejM"/>
+                        <outletCollection property="validators" destination="Qvn-cm-qOV" id="kyQ-Bs-e7d"/>
                     </connections>
                 </customObject>
                 <customObject id="2fo-uh-1oY" customClass="APKeyboardController">
