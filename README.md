@@ -71,7 +71,7 @@ Nickolay Sheika, hawk.ukr@gmail.com
 
 ## Contacts
 
-If you have improvements or concerns, feel free to post [an issue](https://github.com/Alterplay/APAddressBook/issues) and write details.
+If you have improvements or concerns, feel free to post [an issue](https://github.com/Alterplay/APValidators/issues) and write details.
 
 [Check out](https://github.com/Alterplay) all Alterplay's GitHub projects.
 [Email us](mailto:hello@alterplay.com?subject=From%20GitHub%20APValidators) with other ideas and projects.
