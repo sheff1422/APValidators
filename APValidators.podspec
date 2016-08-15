@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "APValidators"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "APValidators is a codeless solution for form validation. Just connect everything right in Interface Builder and you're done."
   s.homepage         = "https://github.com/Alterplay/APValidators"
   s.license          = 'MIT'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'APValidators' => ['Pod/Assets/*.png']
+    'APValidators' => ['Pod/**/*.plist']
   }
 
 end
