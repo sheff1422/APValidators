@@ -3,8 +3,7 @@ use_frameworks!
 
 
 
-target 'APValidators_Tests', :exclusive => true do
+target 'APValidators_Tests' do
 	pod 'Expecta'
 	pod 'OCMock'
-  
 end

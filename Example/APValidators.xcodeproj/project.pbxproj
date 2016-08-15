@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39AC69C72FD54216405BA482 /* Pods_APValidators_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1604A375057A9C7A1D15BCA4 /* Pods_APValidators_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -58,6 +57,7 @@
 		B6553D9222228ED18F246DA2 /* APEmailValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553A3ABEC2D5322C31DDF4 /* APEmailValidatorTests.m */; };
 		B6553E312870D8AF3A4D3BC2 /* APZipValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B65536404B19F0DA0CF93613 /* APZipValidatorTests.m */; };
 		B6553EAFE64C1BDA1FC21E99 /* APRequiredValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B65530AE48524DF93BDDD72A /* APRequiredValidator.m */; };
+		C0A4D574877D44B7545C8636 /* Pods_APValidators_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1743715C9716FD671592026 /* Pods_APValidators_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +72,7 @@
 
 /* Begin PBXFileReference section */
 		0C44145423E492F905A190EA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		1604A375057A9C7A1D15BCA4 /* Pods_APValidators_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APValidators_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1817A4421B0A40F6CAD4EC0D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		598D4B66BCD0A915121EB6F9 /* Pods-APValidators_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APValidators_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* APValidators_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APValidators_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,7 +151,9 @@
 		B6553ECDF9ACD6CD4225D379 /* UITextView+APValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+APValidators.h"; sourceTree = "<group>"; };
 		B6553F073C7E5C42E95E294D /* APViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
 		B6553FC0CCD39A03E5091652 /* APZipValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APZipValidator.m; sourceTree = "<group>"; };
-		B6C1921ACDFD8AC89BAC7463 /* Pods-APValidators_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APValidators_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B68C64D6A6CC8DF16626956F /* Pods-APValidators_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APValidators_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D1743715C9716FD671592026 /* Pods_APValidators_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APValidators_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DD3DB704A32D678D5E8DF /* Pods-APValidators_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APValidators_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF64A6E8928B3DA19F2604D9 /* APValidators.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = APValidators.podspec; path = ../APValidators.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,13 +175,22 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				39AC69C72FD54216405BA482 /* Pods_APValidators_Tests.framework in Frameworks */,
+				C0A4D574877D44B7545C8636 /* Pods_APValidators_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E937BC9ED60484494E7FB26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D79DD3DB704A32D678D5E8DF /* Pods-APValidators_Tests.debug.xcconfig */,
+				B68C64D6A6CC8DF16626956F /* Pods-APValidators_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +200,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				684A40262114DE0CC34ED0DE /* Pods */,
+				0E937BC9ED60484494E7FB26 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,7 +220,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				1604A375057A9C7A1D15BCA4 /* Pods_APValidators_Tests.framework */,
+				D1743715C9716FD671592026 /* Pods_APValidators_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -286,15 +295,6 @@
 				1817A4421B0A40F6CAD4EC0D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		684A40262114DE0CC34ED0DE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				598D4B66BCD0A915121EB6F9 /* Pods-APValidators_Tests.debug.xcconfig */,
-				B6C1921ACDFD8AC89BAC7463 /* Pods-APValidators_Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		716CBD461C970FAF00C02C33 /* Pod */ = {
@@ -458,12 +458,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "APValidators_Tests" */;
 			buildPhases = (
-				F36A21B4E61C8849B89E8462 /* Check Pods Manifest.lock */,
+				83B15C847A298152A61CB55D /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				EA733E0C14C5ED1EC2690A8F /* Embed Pods Frameworks */,
-				B9C2D28C2734E35DD2F281FD /* Copy Pods Resources */,
+				58CE7A1F6B248991B9EEE971 /* [CP] Embed Pods Frameworks */,
+				6C799D83FFE8853DE371AA94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -533,29 +533,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B9C2D28C2734E35DD2F281FD /* Copy Pods Resources */ = {
+		58CE7A1F6B248991B9EEE971 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA733E0C14C5ED1EC2690A8F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,14 +548,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F36A21B4E61C8849B89E8462 /* Check Pods Manifest.lock */ = {
+		6C799D83FFE8853DE371AA94 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APValidators_Tests/Pods-APValidators_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83B15C847A298152A61CB55D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,7 +772,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 598D4B66BCD0A915121EB6F9 /* Pods-APValidators_Tests.debug.xcconfig */;
+			baseConfigurationReference = D79DD3DB704A32D678D5E8DF /* Pods-APValidators_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -796,7 +796,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6C1921ACDFD8AC89BAC7463 /* Pods-APValidators_Tests.release.xcconfig */;
+			baseConfigurationReference = B68C64D6A6CC8DF16626956F /* Pods-APValidators_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
