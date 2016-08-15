@@ -20,8 +20,10 @@
         [NSException raise:NSInvalidArgumentException format:@"Country code must be from two letters!"];
     }
 
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSString *path = [bundle pathForResource:@"ZipRegex" ofType:@"plist"];
+    NSBundle *bundle =  [NSBundle bundleForClass:[self class]];
+    NSString *podBundlePath = [bundle pathForResource:@"APValidators" ofType:@"bundle"];
+    NSBundle *podBundle = [NSBundle bundleWithPath:podBundlePath];
+    NSString *path = [podBundle pathForResource:@"ZipRegex" ofType:@"plist"];
     NSDictionary *regexTable = [[NSDictionary alloc] initWithContentsOfFile:path];
     return regexTable[countryCode];
 }
