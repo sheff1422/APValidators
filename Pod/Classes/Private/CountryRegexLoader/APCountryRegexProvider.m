@@ -19,11 +19,18 @@
     if ([countryCode length] != 2) {
         [NSException raise:NSInvalidArgumentException format:@"Country code must be from two letters!"];
     }
+    
+    NSString *fileName = @"ZipRegex";
+    NSString *fileType = @"plist";
 
     NSBundle *bundle =  [NSBundle bundleForClass:[self class]];
-    NSString *podBundlePath = [bundle pathForResource:@"APValidators" ofType:@"bundle"];
-    NSBundle *podBundle = [NSBundle bundleWithPath:podBundlePath];
-    NSString *path = [podBundle pathForResource:@"ZipRegex" ofType:@"plist"];
+    NSString *path = [bundle pathForResource:fileName ofType:fileType];
+    if (! path) {
+        NSString *podBundlePath = [bundle pathForResource:@"APValidators" ofType:@"bundle"];
+        NSBundle *podBundle = [NSBundle bundleWithPath:podBundlePath];
+        path = [podBundle pathForResource:fileName ofType:fileType];
+    }
+    
     NSDictionary *regexTable = [[NSDictionary alloc] initWithContentsOfFile:path];
     return regexTable[countryCode];
 }
