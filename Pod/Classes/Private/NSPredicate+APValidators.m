@@ -12,7 +12,7 @@
 
 + (NSPredicate *)predicateWithRegex:(NSString *)regex
 {
-    return [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", regex];
 }
 
 + (NSPredicate *)predicateForCreditCardType:(APCreditCardType)creditCardType
