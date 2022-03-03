@@ -65,7 +65,7 @@ NSString *const APValidatorStateChangedNotification = @"APValidatorStateChangedN
 
 - (void)validate
 {
-    // abstract
+    // e
 }
 
 #pragma mark - Description
